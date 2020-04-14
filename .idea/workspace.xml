@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APCS2020Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/APCS2020Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/.idea/dictionaries/donna.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/insertName.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/src/Enemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/src/MovingImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertName/src/Player.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="" />
+      <created>1586839349902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586839349902</updated>
+      <workItem from="1586839351225" duration="239000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
