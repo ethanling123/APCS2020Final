@@ -7,14 +7,14 @@
  */
 
 // This class extends Weapon, and it is the second strongest, fastest version of weapon, coconut
-public class Coconut extends Weapon {
+public class Missile extends Weapon {
     // FIELDS:
     public static final int DAMAGE = 15;
     public static final double SPEED = 0.06;
 
     // CONSTRUCTOR:
-    public Coconut(int xPos, int yPos, int targetX, int targetY) {
-    	super(Coconut.class.getResource("/assets/Coconut.png"), DAMAGE, SPEED, xPos, yPos, targetX, targetY);
+    public Missile(int xPos, int yPos, int targetX, int targetY) {
+    	super(Missile.class.getResource("/assets/Coconut.png"), DAMAGE, SPEED, xPos, yPos, targetX, targetY);
     }
 
 }

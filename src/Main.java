@@ -10,7 +10,6 @@ import java.awt.event.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -345,13 +344,13 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
 
             if (mousePressed) {
                 if (currentWeapon == BANANA) {
-                    weapons.add(new Banana(monkey.getX(), monkey.getY(), mouseX - monkey.getX(), mouseY - monkey.getY()));
+                    weapons.add(new Laser(monkey.getX(), monkey.getY(), mouseX - monkey.getX(), mouseY - monkey.getY()));
                     bananaButton.setBackground(Color.YELLOW);
                 } else if (currentWeapon == COCONUT) {
-                    weapons.add(new Coconut(monkey.getX(), monkey.getY(), mouseX - monkey.getX(), mouseY - monkey.getY()));
+                    weapons.add(new Missile(monkey.getX(), monkey.getY(), mouseX - monkey.getX(), mouseY - monkey.getY()));
                     coconutButton.setBackground(Color.YELLOW);
                 } else if (currentWeapon == POOP) {
-                    weapons.add(new Poop(monkey.getX(), monkey.getY(), mouseX - monkey.getX(), mouseY - monkey.getY()));
+                    weapons.add(new DeathRay(monkey.getX(), monkey.getY(), mouseX - monkey.getX(), mouseY - monkey.getY()));
                     poopButton.setBackground(Color.YELLOW);
                 }
                 mousePressed = false;

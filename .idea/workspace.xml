@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Laser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coconut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Missile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrazyEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrazyEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Poop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DeathRay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -16,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -55,14 +83,57 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="448" y="133" key="#Project_Structure" timestamp="1586839652485">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="448" y="133" key="#Project_Structure/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839652485" />
+    <state x="773" y="265" key="#com.intellij.ide.util.MemberChooser" timestamp="1586900993190">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="773" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586900993190" />
+    <state x="745" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586900342503">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="745" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586900342503" />
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586839558492">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839558492" />
+    <state width="1638" height="290" key="GridCell.Tab.0.bottom" timestamp="1586902733933">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733933" />
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
+    <state width="1638" height="290" key="GridCell.Tab.0.center" timestamp="1586902733929">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733929" />
+    <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889406" />
+    <state width="1638" height="290" key="GridCell.Tab.0.left" timestamp="1586902733928">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733928" />
+    <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889405" />
+    <state width="1638" height="290" key="GridCell.Tab.0.right" timestamp="1586902733931">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733931" />
+    <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
+    <state x="760" y="247" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586899179706">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="760" y="247" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899179706" />
   </component>
 </project>
