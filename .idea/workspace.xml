@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APCS2020Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/APCS2020Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/.idea/dictionaries/donna.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/insertName.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/src/Enemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/src/MovingImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertName/src/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +24,20 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="APCS2020Final" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -47,11 +48,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586839349902</updated>
-      <workItem from="1586839351225" duration="239000" />
+      <workItem from="1586839351225" duration="423000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="448" y="133" key="#Project_Structure" timestamp="1586839652485">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="448" y="133" key="#Project_Structure/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839652485" />
+    <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586839558492">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839558492" />
   </component>
 </project>
