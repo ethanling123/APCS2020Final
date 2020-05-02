@@ -20,13 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Laser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coconut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Missile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrazyEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrazyEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrazyEnemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DeathRay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Laser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Poop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DeathRay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Missile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartEnemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SplashScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Banana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Coconut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Gorillo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Monkey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Poop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/SmartGorillo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/music.wav" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1bLAzfjdtkADC7rNNSu3g8TTL3v" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,6 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -77,6 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586839349902</updated>
       <workItem from="1586839351225" duration="423000" />
+      <workItem from="1588401264516" duration="105000" />
     </task>
     <servers />
   </component>
@@ -93,6 +106,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="448" y="133" key="#Project_Structure" timestamp="1586839652485">
@@ -107,6 +121,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="745" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586900342503" />
+    <state x="581" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588401332054">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="581" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1588401332054" />
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586839558492">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

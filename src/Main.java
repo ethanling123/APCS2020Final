@@ -53,7 +53,7 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
     private JButton restartButton = new JButton("Restart?");
 
     private File highScoreFile = new File("src/assets/highScore.txt");
-    
+
     private boolean coconutUnlocked;
     private boolean poopUnlocked;
     private boolean upKeyPressed, downKeyPressed, leftKeyPressed, rightKeyPressed, mousePressed;
@@ -72,13 +72,13 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
         money = 0;
         playerHealth = PLAYER_HEALTH_MAX;
         try {
-        	System.out.println(highScoreFile.getAbsolutePath());
-			BufferedReader f = new BufferedReader(new FileReader(highScoreFile));
-			highScore = Integer.parseInt(f.readLine());
-			f.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+            System.out.println(highScoreFile.getAbsolutePath());
+            BufferedReader f = new BufferedReader(new FileReader(highScoreFile));
+            highScore = Integer.parseInt(f.readLine());
+            f.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         score = 0;
 
         coconutUnlocked = false;
@@ -128,25 +128,9 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
     public static void main(String[] args) {
 
         ImageIcon img = new ImageIcon(Main.class.getResource("/assets/Icon.png"));
-        JFrame splashScreen = new JFrame("MonkeyDefense");
-
-        //Splashscreen
-        splashScreen.setBounds(150, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-        SplashScreen splashPanel = new SplashScreen();
-        splashPanel.setBackground(Color.PINK);
-        Container cSplash = splashScreen.getContentPane();
-        cSplash.add(splashPanel);
-        splashScreen.setIconImage(img.getImage());
-        splashScreen.setVisible(true);
-        try {
-            Thread.sleep(5000); // shows splash screen for 4 seconds
-        } catch (InterruptedException exception) {
-        }
-        splashScreen.dispatchEvent(new WindowEvent(splashScreen, WindowEvent.WINDOW_CLOSING));
-
 
         //Window
-        JFrame window = new JFrame("MonkeyDefense");
+        JFrame window = new JFrame("Spaceteroids");
         window.setBounds(150, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
         window.setExtendedState(window.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -207,8 +191,8 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
 
         //crazyEnemy drawing and HP Bar
         for (int t = 0; t < enemies.size(); t++) {
-        	if (t < enemies.size()) {
-        		int xEnemy = enemies.get(t).getX();
+            if (t < enemies.size()) {
+                int xEnemy = enemies.get(t).getX();
                 int yEnemy = enemies.get(t).getY();
                 double enemyMaxHealth = 0;
                 enemies.get(t).draw(g, this);
@@ -231,7 +215,7 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
                 g.fillRect(xEnemy - 13, yEnemy + 57, (int) (enemies.get(t).getHealth() / enemyMaxHealth * 80), 10);
                 g.setColor(Color.BLACK);
                 g.drawRect(xEnemy - 14, yEnemy + 56, (80), 11);
-        	}
+            }
         }
 
         //Game over when player health hits 0
@@ -245,15 +229,15 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
             }
             currentWeapon = BANANA;
             if (score >= highScore) {
-            	try {
-					PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(highScoreFile)));
-					out.print(score);
-					out.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+                try {
+                    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(highScoreFile)));
+                    out.print(score);
+                    out.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-            	
+
             gameOver = true;
         }
 
