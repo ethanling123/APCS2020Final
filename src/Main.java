@@ -54,26 +54,6 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
         c.add(panel);
         window.setIconImage(img.getImage());
         window.setVisible(true);
-
-    }
-
-    //Used to play the background music
-    private void playMusic() {
-        AudioInputStream audioInputStream;
-        try {
-            audioInputStream = AudioSystem.getAudioInputStream(Main.class.getResource("/assets/music.wav"));
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-
-            gainControl.setValue(-15f); //sound control: 15 less decibels
-//            gainControl.setValue(-80f); //use if mute
-
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
-            clip.start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     //Paints everything

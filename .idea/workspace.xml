@@ -20,23 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrazyEnemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DeathRay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Laser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/DeathRay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Laser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/META-INF/APCS2020Final.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Missile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/MovingImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/MovingImage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/SmartEnemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/SplashScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Weapon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Banana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Coconut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Gorillo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Monkey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Poop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/SmartGorillo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/music.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Missile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SmartEnemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SplashScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Weapon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Banana.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Coconut.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Gorillo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Monkey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Poop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/SmartGorillo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/music.wav" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +69,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ethan\Documents\GitHub\APCS2020Final\src\assets" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -89,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586839349902</updated>
       <workItem from="1586839351225" duration="423000" />
-      <workItem from="1588401264516" duration="105000" />
+      <workItem from="1588401264516" duration="502000" />
     </task>
     <servers />
   </component>
@@ -113,9 +123,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="448" y="133" key="#Project_Structure/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839652485" />
-    <state x="773" y="265" key="#com.intellij.ide.util.MemberChooser" timestamp="1586900993190">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="580" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1588401608995">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state x="580" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1588401608995" />
     <state x="773" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586900993190" />
     <state x="745" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586900342503">
       <screen x="0" y="23" width="1920" height="1057" />
@@ -129,24 +140,28 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839558492" />
-    <state width="1638" height="290" key="GridCell.Tab.0.bottom" timestamp="1586902733933">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1084" height="223" key="GridCell.Tab.0.bottom" timestamp="1588401754366">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state width="1084" height="223" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
     <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733933" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
-    <state width="1638" height="290" key="GridCell.Tab.0.center" timestamp="1586902733929">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1084" height="223" key="GridCell.Tab.0.center" timestamp="1588401754366">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state width="1084" height="223" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
     <state width="1638" height="290" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733929" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889406" />
-    <state width="1638" height="290" key="GridCell.Tab.0.left" timestamp="1586902733928">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1084" height="223" key="GridCell.Tab.0.left" timestamp="1588401754366">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state width="1084" height="223" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
     <state width="1638" height="290" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733928" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889405" />
-    <state width="1638" height="290" key="GridCell.Tab.0.right" timestamp="1586902733931">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1084" height="223" key="GridCell.Tab.0.right" timestamp="1588401754366">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
+    <state width="1084" height="223" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
     <state width="1638" height="290" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733931" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
     <state x="760" y="247" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586899179706">
