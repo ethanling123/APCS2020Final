@@ -20,28 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/DeathRay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Laser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/META-INF/APCS2020Final.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Enemy.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Missile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/MovingImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/MovingImage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/SmartEnemy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/SplashScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Weapon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Banana.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Coconut.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Gorillo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Monkey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/Poop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/SmartGorillo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/music.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/assets/highScore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/assets/highScore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Asteroid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/highScore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/highScore.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +87,9 @@
       <updated>1586839349902</updated>
       <workItem from="1586839351225" duration="423000" />
       <workItem from="1588401264516" duration="502000" />
+      <workItem from="1588456316000" duration="3875000" />
+      <workItem from="1588460640457" duration="3689000" />
+      <workItem from="1588464785866" duration="6213000" />
     </task>
     <servers />
   </component>
@@ -132,41 +122,49 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="745" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586900342503" />
-    <state x="581" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588401332054">
+    <state x="581" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588462493366">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="581" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1588401332054" />
+    <state x="581" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1588462493366" />
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586839558492">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839558492" />
-    <state width="1084" height="223" key="GridCell.Tab.0.bottom" timestamp="1588401754366">
+    <state width="1398" height="2" key="GridCell.Tab.0.bottom" timestamp="1588472187903">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1084" height="223" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
+    <state width="1398" height="2" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1588472187903" />
     <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733933" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
-    <state width="1084" height="223" key="GridCell.Tab.0.center" timestamp="1588401754366">
+    <state width="1398" height="2" key="GridCell.Tab.0.center" timestamp="1588472187903">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1084" height="223" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
+    <state width="1398" height="2" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1588472187903" />
     <state width="1638" height="290" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733929" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889406" />
-    <state width="1084" height="223" key="GridCell.Tab.0.left" timestamp="1588401754366">
+    <state width="1398" height="2" key="GridCell.Tab.0.left" timestamp="1588472187903">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1084" height="223" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
+    <state width="1398" height="2" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1588472187903" />
     <state width="1638" height="290" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733928" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889405" />
-    <state width="1084" height="223" key="GridCell.Tab.0.right" timestamp="1588401754366">
+    <state width="1398" height="2" key="GridCell.Tab.0.right" timestamp="1588472187903">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1084" height="223" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1588401754366" />
+    <state width="1398" height="2" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1588472187903" />
     <state width="1638" height="290" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733931" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
+    <state x="93" y="93" width="1253" height="673" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588471089422">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="93" y="93" width="1253" height="673" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.860@0.0.1440.860" timestamp="1588471089422" />
     <state x="760" y="247" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586899179706">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="760" y="247" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899179706" />
+    <state x="528" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588472172380">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="528" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1588472172380" />
   </component>
 </project>

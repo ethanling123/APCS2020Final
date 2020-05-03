@@ -14,7 +14,7 @@ public class Player extends MovingImage {
 
     // == CONSTRUCTOR ==
     public Player(int xPos, int yPos, int health) {
-        super(Player.class.getResource("/assets/Monkey.png"), xPos, yPos, 50, 50);
+        super(Player.class.getResource("/assets/Icon.png"), xPos, yPos, 50, 50);
         xMovement = 0;
         yMovement = 0;
         this.health = health;
