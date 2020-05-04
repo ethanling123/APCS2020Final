@@ -1,31 +1,47 @@
 import java.net.URL;
 
-/*
- * Authors: Ethan Ling, Kevin Chu
- * Period: 4
- * Date: 5/28/2019
+import javax.swing.ImageIcon;
+
+/**
+ * An asteroid that travels across the map and deals impact damage to whatever it collides with
+ * 
+ * Authors: Ethan Ling, Hangyul Yun
+ * Period: 6
+ * Date: 5/03/2020
  * MonkeyDefence Capstone Project
- * Class: Enemy
+ * Class: Projectile
  */
 
-public abstract class Asteroid extends MovingImage {
+public class Asteroid extends Projectile implements DamagableInterface {
 
-    // == FIELD ==
-    public double xMovement, yMovement, speed, damage, health;
+	// == FIELD ==
+    public float health;
 
     // == CONSTRUCTOR ==
-    public Asteroid(URL location, int xPos, int yPos, int targetX, int targetY, double health, double damage, double speed) {
-        super(location, xPos, yPos, 50, 50);
-        xMovement = 0;
-        yMovement = 0;
-        this.health = health;
-        this.damage = damage;
-        this.speed = speed;
+    
+    public Asteroid(int x, int y, int r, ImageIcon i, int xv, int yv, float dmg, float health) {
+		super(x, y, r, i, xv, yv, dmg, true, null);
+		
+		this.health = health;
+	}
 
-        xMovement = 0;
-        yMovement = 0;
-    }
-
+	@Override
+	public boolean hurtActor(Actor causingActor, float damageQuantity) {
+		health -= damageQuantity;
+		if(health < 0.f)
+		{
+			//TODO: Destroy actor
+		}
+		return false;
+	}
+    
+	
+	
+	/*@Ethan: I commented out most of the methods below since the actor superclass and the DamagableInterface method handles much of what
+	 * I think the asteroids should behave like.*/
+	
+	
+    /*
     //Abstract chase method
     public abstract void chase(Player target);
 
@@ -42,4 +58,5 @@ public abstract class Asteroid extends MovingImage {
     public void update() {
         moveByAmount((int) xMovement, (int) yMovement);
     }
+    */
 }

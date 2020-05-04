@@ -4,13 +4,16 @@ import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.net.URL;
 
-/*
+/*NOTE: With the Actor class serving the same purpose, the moving image class is DEPRECATED*/
+
+/**
  * Represents a moving, appearing/disappearing image.
  *
  * by: Shelby
  * on: 5/3/13
  *
  *  Altered by Ethan Ling and Kevin Chu for MongyDefence
+ *  NOTE: the actor class is now considered DEPRECATED. Use the Actor class instead.
  */
 
 public class MovingImage {

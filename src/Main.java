@@ -17,6 +17,12 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ *  A main method for the game.
+ * @author Ethan Ling, Hangyul Yun
+ * @version 05/03/2020
+ *
+ */
 public class Main extends JPanel implements ActionListener, KeyListener, MouseListener {
 
     // ==FIELDS==
@@ -29,8 +35,8 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
     private int health = 100;
     private int score = 0;
     private int highScore;
-
-    private Player player = new Player(getWidth()/2,getHeight()*3/4,health);
+    
+    private PlayerCharacter player = new PlayerCharacter(DRAWING_WIDTH/2, DRAWING_HEIGHT/2, 2, new ImageIcon(Main.class.getResource("/assets/Icon.png")), health, null);
 
     //Main Method
     public static void main(String[] args) {
@@ -63,7 +69,7 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
         g.drawString("High Score: " + highScore, (int) (getWidth()*7.7/9),getHeight()*2/9);
         g.drawString("Health: " + health, (int) (getWidth()*7.7/9),getHeight()*5/9);
 
-        player.draw(g, this);
+        player.draw(this, g);
     }
 
     @Override
