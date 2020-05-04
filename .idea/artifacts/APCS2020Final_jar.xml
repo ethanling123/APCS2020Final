@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="APCS2020Final:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/APCS2020Final_jar</output-path>
+    <root id="archive" name="APCS2020Final.jar">
+      <element id="module-output" name="APCS2020Final" />
+    </root>
+  </artifact>
+</component>

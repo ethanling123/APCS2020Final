@@ -40,7 +40,7 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
 
     //Main Method
     public static void main(String[] args) {
-        ImageIcon img = new ImageIcon(Main.class.getResource("/assets/Icon.png"));
+        ImageIcon img = new ImageIcon(Main.class.getResource("/assets/icon.png"));
 
         //Window
         JFrame window = new JFrame("Spaceteroids");
