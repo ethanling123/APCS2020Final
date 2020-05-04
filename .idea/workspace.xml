@@ -24,18 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/APCS2020Final_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APCS2020Final.eml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APCS2020Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/APCS2020Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Asteroid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Asteroid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/MovingImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/MovingImage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="some stuff" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +46,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -107,8 +96,16 @@
       <workItem from="1588456316000" duration="3875000" />
       <workItem from="1588460640457" duration="3689000" />
       <workItem from="1588464785866" duration="6213000" />
-      <workItem from="1588566201522" duration="2902000" />
+      <workItem from="1588566201522" duration="3216000" />
     </task>
+    <task id="LOCAL-00001" summary="some stuff">
+      <created>1588569612790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588569612790</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +122,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="some stuff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="429" y="50" key="#APCS2020Final.jar" timestamp="1588567697667">
@@ -156,38 +157,38 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839558492" />
-    <state x="502" y="173" key="FileChooserDialogImpl" timestamp="1588567253631">
+    <state x="502" y="173" key="FileChooserDialogImpl" timestamp="1588569756007">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="502" y="173" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1588567253631" />
-    <state width="699" height="176" key="GridCell.Tab.0.bottom" timestamp="1588569552874">
+    <state x="502" y="173" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1588569756007" />
+    <state width="699" height="176" key="GridCell.Tab.0.bottom" timestamp="1588569626046">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="699" height="176" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1588569552874" />
+    <state width="699" height="176" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1588569626046" />
     <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733933" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
-    <state width="699" height="176" key="GridCell.Tab.0.center" timestamp="1588569552874">
+    <state width="699" height="176" key="GridCell.Tab.0.center" timestamp="1588569626046">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="699" height="176" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1588569552874" />
+    <state width="699" height="176" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1588569626046" />
     <state width="1638" height="290" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733929" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889406" />
-    <state width="699" height="176" key="GridCell.Tab.0.left" timestamp="1588569552873">
+    <state width="699" height="176" key="GridCell.Tab.0.left" timestamp="1588569626046">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="699" height="176" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1588569552873" />
+    <state width="699" height="176" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1588569626046" />
     <state width="1638" height="290" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733928" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889405" />
-    <state width="699" height="176" key="GridCell.Tab.0.right" timestamp="1588569552874">
+    <state width="699" height="176" key="GridCell.Tab.0.right" timestamp="1588569626046">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="699" height="176" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1588569552874" />
+    <state width="699" height="176" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1588569626046" />
     <state width="1638" height="290" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733931" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
-    <state x="201" y="5" key="SettingsEditor" timestamp="1588569490921">
+    <state x="201" y="5" key="SettingsEditor" timestamp="1588569916536">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="201" y="5" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1588569490921" />
+    <state x="201" y="5" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1588569916536" />
     <state x="93" y="93" width="1253" height="673" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588471089422">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
