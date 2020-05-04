@@ -117,6 +117,22 @@ public class Actor {
 	}
 	
 	/**
+	 * Get the xVelocity of the actor
+	 * @return xVelocity
+	 */
+	public int getXVelocity() {
+		return xVelo;
+	}
+	
+	/**
+	 * Get the yVelocity of the actor
+	 * @return yVelocity
+	 */
+	public int getYVelocity() {
+		return yVelo;
+	}
+	
+	/**
 	 * An act method for the actor that is called every frame
 	 */
 	public void act() {
