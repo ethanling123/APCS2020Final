@@ -5,10 +5,10 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- *  A main method for the game.
+ * A main method for the game.
+ *
  * @author Ethan Ling, Hangyul Yun
  * @version 05/03/2020
- *
  */
 public class Main extends JPanel implements ActionListener, KeyListener, MouseListener {
 
@@ -22,17 +22,16 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
     private int health = 100;
     private int score = 0;
     private int highScore;
-    
-    private PlayerCharacter player = new PlayerCharacter(DRAWING_WIDTH/2, DRAWING_HEIGHT/2, 2, new ImageIcon(Main.class.getResource("/assets/Icon.png")), health, null);
+
+//    private ImageIcon img = new ImageIcon(Main.class.getResource("/assets/icon.png"));
+//    private PlayerCharacter player = new PlayerCharacter(DRAWING_WIDTH/2, DRAWING_HEIGHT/2, 2, img, health, null);
 
     //Main Method
     public static void main(String[] args) {
-        ImageIcon img = new ImageIcon(Main.class.getResource("/assets/icon.png"));
-
         //Window
         JFrame window = new JFrame("Spaceteroids");
         window.setBounds(150, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-        window.setExtendedState(window.getExtendedState() | JFrame  .MAXIMIZED_BOTH);
+        window.setExtendedState(window.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Panel
@@ -40,7 +39,7 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
         panel.setBackground(background);
         Container c = window.getContentPane();
         c.add(panel);
-        window.setIconImage(img.getImage());
+//        window.setIconImage(img.getImage());
         window.setVisible(true);
     }
 
@@ -48,15 +47,15 @@ public class Main extends JPanel implements ActionListener, KeyListener, MouseLi
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.lightGray);
-        g.fillRect((int) (getWidth()*7.5/9),0, (getWidth()),getHeight());
+        g.fillRect((int) (getWidth() * 7.5 / 9), 0, (getWidth()), getHeight());
 
         g.setColor(Color.black);
         g.setFont(font);
-        g.drawString("Score: " + score, (int) (getWidth()*7.7/9),getHeight()/9);
-        g.drawString("High Score: " + highScore, (int) (getWidth()*7.7/9),getHeight()*2/9);
-        g.drawString("Health: " + health, (int) (getWidth()*7.7/9),getHeight()*5/9);
+        g.drawString("Score: " + score, (int) (getWidth() * 7.7 / 9), getHeight() / 9);
+        g.drawString("High Score: " + highScore, (int) (getWidth() * 7.7 / 9), getHeight() * 2 / 9);
+        g.drawString("Health: " + health, (int) (getWidth() * 7.7 / 9), getHeight() * 5 / 9);
 
-        player.draw(this, g);
+//        player.draw(this, g);
     }
 
     @Override
