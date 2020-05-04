@@ -68,7 +68,7 @@
       <recent name="C:\Users\Ethan\Documents\GitHub\APCS2020Final\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.APCS2020Final.jar (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="APCS2020Final" />
@@ -86,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.APCS2020Final.jar (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.APCS2020Final.jar (1)" />
         <item itemvalue="JAR Application.APCS2020Final.jar" />
       </list>
     </recent_temporary>
