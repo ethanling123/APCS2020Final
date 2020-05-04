@@ -72,4 +72,13 @@ public class GameCharacter extends Actor implements DamagableInterface{
 	public void killedActor(Actor actorThatDied)
 	{
 	}
+	
+	/**
+	 * Sets the current projectile type.
+	 * @param 
+	 */
+	public void setProjectile(Class<Projectile> shotType)
+	{
+		this.projectileType=shotType;
+	}
 }
