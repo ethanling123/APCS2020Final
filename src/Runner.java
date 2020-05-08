@@ -32,13 +32,17 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 
     private ImageIcon playerImg;
     private ImageIcon enemyImg;
+    private ImageIcon lemonImg;
     private PlayerCharacter player;
     private ArrayList<Asteroid> enemies;
     
     public Runner() {
     	playerImg = new ImageIcon(Main.class.getResource("/assets/icon.png"));
     	enemyImg =  new ImageIcon(Main.class.getResource("/assets/lil.png"));
+    	lemonImg = new ImageIcon(Main.class.getResource("/assets/lemon.png"));
     	player = new PlayerCharacter(Main.DRAWING_WIDTH/2, Main.DRAWING_HEIGHT/2, 2, playerImg, health, null);
+    	Projectile lemon=new Projectile(0, 0, 10, lemonImg, 0, 0, 5, false, player);
+    	player.setProjectile(lemon);
     	enemies=new ArrayList<Asteroid>();
     	enemies.add(new Asteroid(50,50,10,enemyImg,0,0,10,20));
     }
