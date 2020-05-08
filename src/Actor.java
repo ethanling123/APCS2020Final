@@ -50,7 +50,7 @@ public class Actor {
 	
 	/**
 	 * Whether or not this actor is intersecting any other actors
-	 * @param another actor to check collisions against
+	 * @param other actor to check collisions against
 	 * @return whether or not this actor and the other actor are intersecting
 	 */
 	public boolean isIntersecting(Actor other) {

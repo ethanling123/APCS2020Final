@@ -1,4 +1,4 @@
-AP Computer Science Final Project - README Template
+    AP Computer Science Final Project - README Template
 Instructions:
 The first step in creating an excellent APCS final project is to write up a README. At this stage, this README file acts as your project proposal. Once you’ve filled in all components, Shelby will read through it and suggest edits. Ultimately, you need a document that adequately describes your project idea and we must agree on this plan.
 Have one member of your group make a copy of this Google Doc. Then, they should share it with all other members so that every group member has edit permissions.
@@ -39,15 +39,13 @@ First the player will have to navigate a title menu screen before being able to 
 Features List (THE ONLY SECTION THAT CANNOT CHANGE LATER):
 Must-have Features:
 [These are features that we agree you will definitely have by the project due date. A good final project would have all of these completed. At least 5 are required. Each feature should be fully described (at least a few full sentences for each)]
- A moveable character that is controlled by the player. The player would have to control the character and prevent losing life points. 
+ A moveable character that is controlled by the player. The player would have to control the character and prevent losing life points.
 Projectiles are easily the most important component in the game, as the screen will often be covered by these for difficulty and challenge.
  In order to make the game more difficult, we will also have enemies that attack the player. These enemies will attempt to damage the player until the player dies. 
 In order to add some progression, the enemies will become harder as the player progresses through the game.  
 We will also have a scoring mechanism. As the player progresses, the game will keep track of how many points they have gained and store the highest score. 
 Points increase from certain collectibles (which are in turn dropped by defeated enemies or other players), and through grazing (getting close to bullets but not to the point where they deal damage). Likewise, score is lost with each hit taken.
 A title screen is required for the player to navigate prior to launching the main game campaign.
-
-
 
 
 Want-to-have Features:

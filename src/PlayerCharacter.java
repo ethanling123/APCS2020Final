@@ -20,13 +20,11 @@ public class PlayerCharacter extends GameCharacter {
 	 */
 	public PlayerCharacter(int x, int y, int r, ImageIcon i, float health, Class<Projectile> shotType) {
 		super(x, y, r, i, health, 0.f, shotType);
-		
 		points = 0;
 	}
 	
 	@Override
-	public void killedActor(Actor actorThatDied)
-	{
+	public void killedActor(Actor actorThatDied) {
 		points += 10;
 	}
 	
@@ -34,8 +32,7 @@ public class PlayerCharacter extends GameCharacter {
 	 * gets the current amount of points the player has.
 	 * @return the amount of points the player currently has.
 	 */
-	public int getPoints()
-	{
+	public int getPoints() {
 		return points;
 	}
 }
