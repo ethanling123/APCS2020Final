@@ -1,5 +1,4 @@
-import java.lang.reflect.Constructor;
-
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 /**
@@ -11,7 +10,7 @@ public class GameCharacter extends Actor implements DamagableInterface{
 	
 	private float health;
 	private float overlapDmg;
-	Class<Projectile> projectileType;
+	Projectile projectileType;
 	
 	/**
 	 * Constructor for a game character
@@ -23,7 +22,7 @@ public class GameCharacter extends Actor implements DamagableInterface{
 	 * @param dmg the amount of damage dealt by the character
 	 * @param shotType the type of projectile the character shoots.
 	 */
-	public GameCharacter(int x, int y, int r, ImageIcon i, float health, float dmg, Class<Projectile> shotType) {
+	public GameCharacter(int x, int y, int r, ImageIcon i, float health, float dmg, Projectile shotType) {
 		super(x, y, r, i);
 		
 		this.health = health;
@@ -49,16 +48,16 @@ public class GameCharacter extends Actor implements DamagableInterface{
 	
 	/**
 	 * Shoot projectiles and add them to the screen.
+	 * @param screen 
 	 */
-	public void shootProjectile() {
+	public void shootProjectile(ArrayList<Projectile> screen,Actor shooter,int xv,int yv) {
 		try
 		{
 			if(projectileType != null)
 			{
-				Constructor<Projectile> projConstructor = projectileType.getConstructor();
-				Projectile spawnedProjectile = projConstructor.newInstance(new Object[] {});
-				//^^ This is a bit sus.
-				//TODO: Add projectile to global actor manager
+				Projectile spawnedProjectile = projectileType.makeProjectile(shooter.getxCord(), 
+						shooter.getyCord(),xv, yv, shooter);
+				screen.add(spawnedProjectile);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -66,19 +65,15 @@ public class GameCharacter extends Actor implements DamagableInterface{
 	}
 	
 	/**
-	 * Register the event of killing another actor. Used for adding points or a death message.
-	 * @param actorThatDied the actor that has been killed by this actor.
-	 */
-	public void killedActor(Actor actorThatDied)
-	{
-	}
-	
-	/**
 	 * Sets the current projectile type.
 	 * @param 
 	 */
-	public void setProjectile(Class<Projectile> shotType)
+	public void setProjectile(Projectile shotType)
 	{
 		this.projectileType=shotType;
+	}
+
+	public float getHealth() {
+		return health;
 	}
 }

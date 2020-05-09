@@ -22,9 +22,10 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 	
 	// ==FIELDS==
     private final Font font = new Font("ComicSans", Font.PLAIN, 20);
+    private static final int COOLDOWN_MAX=100;
+    private static int highScore;
     private int health = 100;
-    private int score = 0;
-    private int highScore;
+    private int cooldown = 0;
     private boolean pressedUp;
     private boolean pressedDown;
     private boolean pressedLeft;
@@ -35,8 +36,9 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
     private ImageIcon lemonImg;
     private PlayerCharacter player;
     private ArrayList<Asteroid> enemies;
+    private ArrayList<Projectile> screen;
     
-    public Runner() {
+	public Runner() {
     	playerImg = new ImageIcon(Main.class.getResource("/assets/icon.png"));
     	enemyImg =  new ImageIcon(Main.class.getResource("/assets/lil.png"));
     	lemonImg = new ImageIcon(Main.class.getResource("/assets/lemon.png"));
@@ -44,7 +46,8 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
     	Projectile lemon=new Projectile(0, 0, 10, lemonImg, 0, 0, 5, false, player);
     	player.setProjectile(lemon);
     	enemies=new ArrayList<Asteroid>();
-    	enemies.add(new Asteroid(50,50,10,enemyImg,0,0,10,20));
+    	screen=new ArrayList<Projectile>();
+    	enemies.add(new Asteroid(50,50,10,enemyImg,0,0,10,5));
     }
     
     //Paints everything
@@ -55,42 +58,91 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 
         g.setColor(Color.black);
         g.setFont(font);
-        g.drawString("Score: " + score, (int) (getWidth() * 7.7 / 9), getHeight() / 9);
+        g.drawString("Score: " + player.getPoints(), (int) (getWidth() * 7.7 / 9), getHeight() / 9);
         g.drawString("High Score: " + highScore, (int) (getWidth() * 7.7 / 9), getHeight() * 2 / 9);
-        g.drawString("Health: " + health, (int) (getWidth() * 7.7 / 9), getHeight() * 5 / 9);
+        g.drawString("Health: " + player.getHealth(), (int) (getWidth() * 7.7 / 9), getHeight() * 5 / 9);
 
         this.doVelocity();
-        player.act();
-        System.out.println("do it");
+        
+        act();
+        collide();
+        cooldown--;
+        
         player.draw(this, g);
         enemies.forEach((a)->a.draw(this,g));
+        screen.forEach((a)->a.draw(this,g));
     }
 	
+    private void collide() {
+    	for(Asteroid e:enemies) {
+    		if(e.isIntersecting(player)) {
+    			e.damageActor(player);
+    		}
+    	}
+    	for(Projectile e:screen) {
+    		if(e.fromPlayer()) {
+    	    	for(Asteroid a:enemies) {
+    	    		if(e.isIntersecting(a)) {
+    	    			e.damageActor(a);
+    	    		}
+    	    	}
+    		}
+    		else if(e.isIntersecting(player)) {
+    			e.damageActor(player);
+    		}
+    	}
+    }
+    
+	private void act() {
+		player.act();
+        enemies.forEach((a)->a.act());
+        screen.forEach((a)->a.act());
+	}
+
 	private void doVelocity() {
 		int moveSpeed=1;
 		if(pressedUp) {
 			if(player.getYVelocity()>=moveSpeed*-3) {
 				player.addYVelocity(-moveSpeed);
 			}
-			
 		}
+		else {
+			if(player.getYVelocity()<0) {
+				player.addYVelocity(+moveSpeed);
+			}
+		}
+		
 		if(pressedLeft) {
 			if(player.getXVelocity()>=moveSpeed*-3) {
 				player.addXVelocity(-moveSpeed);
 			}
-			
 		}
+		else {
+			if(player.getXVelocity()<0) {
+				player.addXVelocity(+moveSpeed);
+			}
+		}
+		
 		if(pressedDown) {
 			if(player.getYVelocity()<=moveSpeed*3) {
 				player.addYVelocity(moveSpeed);
 			}
-			
 		}
+		else {
+			if(player.getYVelocity()>0) {
+				player.addYVelocity(-moveSpeed);
+			}
+		}
+		
 		if(pressedRight) {
 			if(player.getXVelocity()<=moveSpeed*3) {
 				player.addXVelocity(moveSpeed);
 			}
-			
+		}
+		else {
+			if(player.getXVelocity()>0) {
+				player.addXVelocity(-moveSpeed);
+			}
 		}
 	}
 
@@ -123,19 +175,22 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 	public void keyPressed(KeyEvent arg) {
 		if (arg.getKeyCode()==KeyEvent.VK_W) {
 			pressedUp=true;
-			System.out.println("Up");
 		}
-		else if (arg.getKeyCode()==KeyEvent.VK_A) {
+		if (arg.getKeyCode()==KeyEvent.VK_A) {
 			pressedLeft=true;
-			System.out.println("Left");
 		}
-		else if (arg.getKeyCode()==KeyEvent.VK_S) {
+		if (arg.getKeyCode()==KeyEvent.VK_S) {
 			pressedDown=true;
-			System.out.println("Down");
 		}
-		else if (arg.getKeyCode()==KeyEvent.VK_D) {
+		if (arg.getKeyCode()==KeyEvent.VK_D) {
 			pressedRight=true;
-			System.out.println("Right");
+		}
+		if (arg.getKeyCode()==KeyEvent.VK_SPACE) {
+			if(cooldown<=0) {
+				player.shootProjectile(screen, player, 0, -10);
+				cooldown=COOLDOWN_MAX;
+			}
+			
 		}
 		repaint();
 	}
@@ -145,13 +200,13 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 		if (arg.getKeyCode()==KeyEvent.VK_W) {
 			pressedUp=false;
 		}
-		else if (arg.getKeyCode()==KeyEvent.VK_A) {
+		if (arg.getKeyCode()==KeyEvent.VK_A) {
 			pressedLeft=false;
 		}
-		else if (arg.getKeyCode()==KeyEvent.VK_S) {
+		if (arg.getKeyCode()==KeyEvent.VK_S) {
 			pressedDown=false;
 		}
-		else if (arg.getKeyCode()==KeyEvent.VK_D) {
+		if (arg.getKeyCode()==KeyEvent.VK_D) {
 			pressedRight=false;
 		}
 	}
@@ -164,6 +219,12 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		
+	}
+
+	public void run() {
+		while(player.isAlive()) {
+			repaint();
+		}
 	}
 
 }

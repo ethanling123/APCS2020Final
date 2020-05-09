@@ -32,5 +32,7 @@ public class Main {
         window.setVisible(true);
         window.addKeyListener(panel);
         window.addMouseListener(panel);
+        
+        panel.run();
     }
 }

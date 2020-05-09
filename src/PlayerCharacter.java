@@ -18,7 +18,7 @@ public class PlayerCharacter extends GameCharacter {
 	 * @param health the health of the player
 	 * @param shotType the type of projectile the player shoots.
 	 */
-	public PlayerCharacter(int x, int y, int r, ImageIcon i, float health, Class<Projectile> shotType) {
+	public PlayerCharacter(int x, int y, int r, ImageIcon i, float health, Projectile shotType) {
 		super(x, y, r, i, health, 0.f, shotType);
 		
 		points = 0;
@@ -37,5 +37,12 @@ public class PlayerCharacter extends GameCharacter {
 	public int getPoints()
 	{
 		return points;
+	}
+
+	public boolean isAlive() {
+		if(super.getHealth()>0) {
+			return true;
+		}
+		return false;
 	}
 }

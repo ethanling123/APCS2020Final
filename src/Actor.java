@@ -148,4 +148,20 @@ public class Actor {
 	public void draw(Component c, Graphics g) {
 		img.paintIcon(c, g, xCord+radius,yCord-radius);
 	}
+	
+	/**
+	 * Returns the Image Icon of this object
+	 * @return img Image Icon
+	 */
+	public ImageIcon getImageIcon() {
+		return img;
+	}
+
+	/**
+	 * Register the event of killing another actor. Used for adding points or a death message.
+	 * @param actorThatDied the actor that has been killed by this actor.
+	 */
+	public void killedActor(Actor hurtActor) {
+		
+	}
 }
