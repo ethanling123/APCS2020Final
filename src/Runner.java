@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
@@ -22,32 +23,49 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 	
 	// ==FIELDS==
     private final Font font = new Font("ComicSans", Font.PLAIN, 20);
-    private static final int COOLDOWN_MAX=100;
+    private static final float COOLDOWN_MAX=(float) 0.5;
+    private static final float IFRAMECOUNT=3;
+    private static final float SPAWNCD=1;
     private static int highScore;
     private int health = 100;
-    private int cooldown = 0;
+    private double iFramesStart;
+    private double startTime;
+    private double cdStart;
+    private double spawnStart;
+    private double seconds=0;
+    private boolean spawn;
+    private boolean iFrames;
+    private boolean cd;
     private boolean pressedUp;
     private boolean pressedDown;
     private boolean pressedLeft;
     private boolean pressedRight;
+    private boolean pressedShoot;
 
     private ImageIcon playerImg;
-    private ImageIcon enemyImg;
+    private ImageIcon lilEnemyImg;
     private ImageIcon lemonImg;
     private PlayerCharacter player;
-    private ArrayList<Asteroid> enemies;
+    private Enemy lil;
+    private ArrayList<Enemy> generalEnemies;
+    private ArrayList<Enemy> enemies;
     private ArrayList<Projectile> screen;
     
 	public Runner() {
+		startTime=System.nanoTime();
     	playerImg = new ImageIcon(Main.class.getResource("/assets/icon.png"));
-    	enemyImg =  new ImageIcon(Main.class.getResource("/assets/lil.png"));
+    	lilEnemyImg =  new ImageIcon(Main.class.getResource("/assets/lil.png"));
     	lemonImg = new ImageIcon(Main.class.getResource("/assets/lemon.png"));
     	player = new PlayerCharacter(Main.DRAWING_WIDTH/2, Main.DRAWING_HEIGHT/2, 2, playerImg, health, null);
+    	lil = new Enemy(0,0,10,lilEnemyImg,10,5,2,null,"lil enemy");
+    	lil.addYVelocity(3);
     	Projectile lemon=new Projectile(0, 0, 10, lemonImg, 0, 0, 5, false, player);
     	player.setProjectile(lemon);
-    	enemies=new ArrayList<Asteroid>();
+    	generalEnemies=new ArrayList<Enemy>();
+    	enemies=new ArrayList<Enemy>();
     	screen=new ArrayList<Projectile>();
-    	enemies.add(new Asteroid(50,50,10,enemyImg,0,0,10,5));
+    	screen.add(new Asteroid(50,50,10,lilEnemyImg,0,5,10,5));
+    	generalEnemies.add(lil);
     }
     
     //Paints everything
@@ -62,44 +80,111 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
         g.drawString("High Score: " + highScore, (int) (getWidth() * 7.7 / 9), getHeight() * 2 / 9);
         g.drawString("Health: " + player.getHealth(), (int) (getWidth() * 7.7 / 9), getHeight() * 5 / 9);
 
-        this.doVelocity();
+        this.doAction();
         
         act();
         collide();
-        cooldown--;
         
         player.draw(this, g);
         enemies.forEach((a)->a.draw(this,g));
         screen.forEach((a)->a.draw(this,g));
     }
 	
-    private void collide() {
-    	for(Asteroid e:enemies) {
+    private void tick(JFrame window) {
+    	seconds=(System.nanoTime()-startTime)/1000000000;
+    	if(seconds-iFramesStart>=IFRAMECOUNT) {
+    		iFrames=false;
+    	}
+    	if(seconds-cdStart>=COOLDOWN_MAX) {
+          	cd=false;
+    	}
+    	if(seconds-spawnStart>=SPAWNCD) {
+      		spawn=true;
+	}
+		if(!enemies.equals(null)) {
+	    	for(Enemy e:enemies) {
+	    		if(e.getxCord()-e.getRadius()>window.getWidth()) {
+	    			enemies.remove(e);
+	    		}
+	    	}
+		}
+		if(screen.equals(null)) {
+	       	for(Projectile e:screen) {
+	       		if(e.equals(null)) {
+	       			System.out.println("a fd");
+	       		}
+	    		if(e.getyCord()-e.getRadius()>window.getHeight()) {
+	    			screen.remove(e);
+	    		}
+	    	}
+		}
+       	lil.setHealth((float)(seconds/30+10));
+       	if(spawn) {
+       		spawn=false;
+       		this.spawnStart=seconds;
+       		spawn(window);
+       	}
+       	
+	}
+
+	private void spawn(JFrame window) {
+		if(!(seconds<Math.sqrt(seconds))) {
+			for(int f=(int)(Math.sqrt(seconds));f>0;f--) {
+				enemies.add(lil.makeEnemy((int)(Math.random()*window.getWidth()),0));
+				enemies.get(enemies.size()-1).addYVelocity(3);
+			}
+		}
+	}
+
+	private void collide() {
+    	for(Enemy e:enemies) {
     		if(e.isIntersecting(player)) {
-    			e.damageActor(player);
+    			if(!iFrames) {
+	    			this.iFramesStart=seconds;
+	    			iFrames=true;
+	    			player.setPoints(player.getPoints()-1);
+	    			if(e.damageActor(player)){
+	    				restartScreen("Killed by: "+e.getName());
+	    			}
+    			}
     		}
     	}
     	for(Projectile e:screen) {
     		if(e.fromPlayer()) {
-    	    	for(Asteroid a:enemies) {
+    	    	for(Enemy a:enemies) {
     	    		if(e.isIntersecting(a)) {
-    	    			e.damageActor(a);
+    	    			if(e.damageActor(a)) {
+    	    				player.killedActor();
+    	    				enemies.remove(a);
+    	    			}
     	    		}
     	    	}
     		}
     		else if(e.isIntersecting(player)) {
-    			e.damageActor(player);
+    			if(!iFrames) {
+    				iFramesStart=seconds;
+    				iFrames=true;
+    				player.setPoints(player.getPoints()-1);
+	    			if(e.damageActor(player)){
+	    				restartScreen("Killed by: an enemy bullet");
+	    			}
+    			}
     		}
     	}
     }
     
+	private void restartScreen(String string) {
+		System.out.println(string);
+		
+	}
+
 	private void act() {
 		player.act();
         enemies.forEach((a)->a.act());
         screen.forEach((a)->a.act());
 	}
 
-	private void doVelocity() {
+	private void doAction() {
 		int moveSpeed=1;
 		if(pressedUp) {
 			if(player.getYVelocity()>=moveSpeed*-3) {
@@ -144,6 +229,13 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 				player.addXVelocity(-moveSpeed);
 			}
 		}
+		if(pressedShoot) {
+			if(!cd) {
+				cd=true;
+				this.cdStart=seconds;
+				player.shootProjectile(screen, player, 0, -10);
+			}
+		}
 	}
 
 	@Override
@@ -186,13 +278,8 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 			pressedRight=true;
 		}
 		if (arg.getKeyCode()==KeyEvent.VK_SPACE) {
-			if(cooldown<=0) {
-				player.shootProjectile(screen, player, 0, -10);
-				cooldown=COOLDOWN_MAX;
-			}
-			
+			pressedShoot=true;
 		}
-		repaint();
 	}
 
 	@Override
@@ -209,6 +296,9 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 		if (arg.getKeyCode()==KeyEvent.VK_D) {
 			pressedRight=false;
 		}
+		if (arg.getKeyCode()==KeyEvent.VK_SPACE) {
+			pressedShoot=false;
+		}
 	}
 
 	@Override
@@ -221,8 +311,9 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 		
 	}
 
-	public void run() {
-		while(player.isAlive()) {
+	public void run(JFrame window) {
+		while(true) {
+			tick(window);
 			repaint();
 		}
 	}

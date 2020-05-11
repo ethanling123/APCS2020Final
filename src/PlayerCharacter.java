@@ -19,15 +19,13 @@ public class PlayerCharacter extends GameCharacter {
 	 * @param shotType the type of projectile the player shoots.
 	 */
 	public PlayerCharacter(int x, int y, int r, ImageIcon i, float health, Projectile shotType) {
-		super(x, y, r, i, health, 0.f, shotType);
+		super(x, y, r, i, health, shotType);
 		
 		points = 0;
 	}
 	
-	@Override
-	public void killedActor(Actor actorThatDied)
-	{
-		points += 10;
+	public void killedActor() {
+		points+=10;
 	}
 	
 	/**
@@ -37,6 +35,15 @@ public class PlayerCharacter extends GameCharacter {
 	public int getPoints()
 	{
 		return points;
+	}
+	
+	/**
+	 * sets the current amount of points the player has.
+	 * @para the amount of points the player currently has.
+	 */
+	public void setPoints(int p)
+	{
+		points=p;
 	}
 
 	public boolean isAlive() {

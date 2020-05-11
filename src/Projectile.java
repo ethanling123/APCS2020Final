@@ -35,31 +35,27 @@ public class Projectile extends Actor{
 	public boolean isIntersecting(Actor other) {
 		if(super.isIntersecting(other))
 		{
-			damageActor(other);
-			
-			if(shouldDieOnHit)
-			{
-				//TODO: somehow delete self (remove self from global actor manager?)
-			}
 			return true;
 		} else {
 			return false;
 		}
 	}
 	
-	public void damageActor(Actor hurtActor)
+	public boolean damageActor(Actor hurtActor)
 	{
 		if(hurtActor instanceof DamagableInterface)
 		{
-			if(hurtActor==summoner) {
+			if(hurtActor!=summoner) {
 				boolean killedActor = ((DamagableInterface)hurtActor).hurtActor(this, damage);
 				
 				if(killedActor)
 				{
-					summoner.killedActor(hurtActor);
+					return true;
 				}
+				return false;
 			}
 		}
+		return false;
 	}
 
 	public ClassLoader getClassLoader() {
@@ -97,5 +93,9 @@ public class Projectile extends Actor{
 		else {
 			return false;
 		}
+	}
+	
+	public Actor getSummoner() {
+		return summoner;
 	}
 }

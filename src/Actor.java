@@ -157,11 +157,11 @@ public class Actor {
 		return img;
 	}
 
-	/**
-	 * Register the event of killing another actor. Used for adding points or a death message.
-	 * @param actorThatDied the actor that has been killed by this actor.
-	 */
-	public void killedActor(Actor hurtActor) {
-		
-	}
+//	/**
+//	 * Register the event of killing another actor. Used for adding points or a death message.
+//	 * @param actorThatDied the actor that has been killed by this actor.
+//	 */
+//	public void killedActor(Actor hurtActor) {
+//		
+//	}
 }
