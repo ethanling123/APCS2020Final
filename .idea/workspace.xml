@@ -25,7 +25,96 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="539530f7-a4ee-44d4-b1bc-d2fbc4cfe0bf" name="Default Changelist" comment="some stuff">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/Actor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/Asteroid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/DamagableInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/GameCharacter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/MovingImage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/PlayerCharacter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/Projectile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/member-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-3.4.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jszip/dist/jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jszip/dist/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/system-properties.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/type-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/APCS2020Final_jar/APCS2020Final.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/APCS2020Final_jar/APCS2020Final.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Actor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Actor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Asteroid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Asteroid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/DamagableInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/DamagableInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/GameCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/GameCharacter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/MovingImage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/PlayerCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/PlayerCharacter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Projectile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Projectile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/APCS2020Final/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APCS2020Final/Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MovingImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projectile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +125,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bLAzfjdtkADC7rNNSu3g8TTL3v" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,7 +139,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -61,7 +153,7 @@
       <recent name="C:\Users\Ethan\Documents\GitHub\APCS2020Final\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.APCS2020Final.jar (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="APCS2020Final" />
@@ -79,8 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.APCS2020Final.jar (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.APCS2020Final.jar (1)" />
         <item itemvalue="JAR Application.APCS2020Final.jar" />
       </list>
     </recent_temporary>
@@ -101,6 +193,16 @@
       <workItem from="1588460640457" duration="3689000" />
       <workItem from="1588464785866" duration="6213000" />
       <workItem from="1588566201522" duration="4992000" />
+      <workItem from="1588618070828" duration="265000" />
+      <workItem from="1588877692595" duration="2665000" />
+      <workItem from="1588885284339" duration="950000" />
+      <workItem from="1588975849674" duration="266000" />
+      <workItem from="1588976207296" duration="3695000" />
+      <workItem from="1588979944156" duration="12292000" />
+      <workItem from="1589147288492" duration="162000" />
+      <workItem from="1589154509549" duration="10000" />
+      <workItem from="1589161682526" duration="392000" />
+      <workItem from="1589163333445" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="some stuff">
       <created>1588569612790</created>
@@ -140,15 +242,23 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="448" y="133" key="#Project_Structure/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839652485" />
-    <state x="580" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1588401608995">
+    <state x="451" y="185" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588979105452">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="580" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1588401608995" />
+    <state x="451" y="185" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1588979105452" />
+    <state x="580" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1588978876542">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="580" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1588978876542" />
     <state x="773" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586900993190" />
-    <state x="452" y="222" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588570553509">
+    <state x="452" y="222" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589163504134">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="452" y="222" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.860@0.0.1440.860" timestamp="1588570553509" />
+    <state x="452" y="222" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.860@0.0.1440.860" timestamp="1589163504134" />
+    <state x="401" y="166" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588976101781">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="401" y="166" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.860@0.0.1440.860" timestamp="1588976101781" />
     <state x="745" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586900342503">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -157,43 +267,64 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="581" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1588462493366" />
-    <state x="445" y="77" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588572349322">
+    <state x="445" y="77" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589163637057">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="445" y="77" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.860@0.0.1440.860" timestamp="1588572349322" />
+    <state x="445" y="77" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.860@0.0.1440.860" timestamp="1589163637057" />
     <state x="711" y="413" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586839558492" />
-    <state x="502" y="173" key="FileChooserDialogImpl" timestamp="1588572345212">
+    <state x="502" y="173" key="FileChooserDialogImpl" timestamp="1588993928585">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="502" y="173" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1588572345212" />
-    <state width="1398" height="176" key="GridCell.Tab.0.bottom" timestamp="1588573786198">
+    <state x="502" y="173" key="FileChooserDialogImpl/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588993928585" />
+    <state x="502" y="173" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1588979582919" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom" timestamp="1589163696364">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1398" height="176" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1588573786198" />
+    <state width="1398" height="164" key="GridCell.Tab.0.bottom/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1589163696364" />
     <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733933" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
-    <state width="1398" height="176" key="GridCell.Tab.0.center" timestamp="1588573786198">
+    <state width="1398" height="197" key="GridCell.Tab.0.center" timestamp="1589163696364">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1398" height="176" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1588573786198" />
+    <state width="1398" height="164" key="GridCell.Tab.0.center/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1589163696364" />
     <state width="1638" height="290" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733929" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889406" />
-    <state width="1398" height="176" key="GridCell.Tab.0.left" timestamp="1588573786198">
+    <state width="1398" height="197" key="GridCell.Tab.0.left" timestamp="1589163696364">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1398" height="176" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1588573786198" />
+    <state width="1398" height="164" key="GridCell.Tab.0.left/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1589163696364" />
     <state width="1638" height="290" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733928" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889405" />
-    <state width="1398" height="176" key="GridCell.Tab.0.right" timestamp="1588573786198">
+    <state width="1398" height="197" key="GridCell.Tab.0.right" timestamp="1589163696364">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1398" height="176" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1588573786198" />
+    <state width="1398" height="164" key="GridCell.Tab.0.right/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1589163696364" />
     <state width="1638" height="290" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1586902733931" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899889407" />
-    <state x="201" y="5" key="SettingsEditor" timestamp="1588570662843">
+    <state width="1398" height="164" key="GridCell.Tab.1.bottom" timestamp="1588996027251">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="201" y="5" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1588570662843" />
+    <state width="1398" height="164" key="GridCell.Tab.1.bottom/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state width="1398" height="164" key="GridCell.Tab.1.center" timestamp="1588996027251">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1398" height="164" key="GridCell.Tab.1.center/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state width="1398" height="164" key="GridCell.Tab.1.left" timestamp="1588996027251">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1398" height="164" key="GridCell.Tab.1.left/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state width="1398" height="164" key="GridCell.Tab.1.right" timestamp="1588996027251">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1398" height="164" key="GridCell.Tab.1.right/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588996027251" />
+    <state x="201" y="5" key="SettingsEditor" timestamp="1589163507209">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="201" y="5" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1589163507209" />
     <state x="93" y="93" width="1253" height="673" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588471089422">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -202,9 +333,36 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="760" y="247" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1920.1057/-1680.97.1680.1027@0.23.1920.1057" timestamp="1586899179706" />
-    <state x="528" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588567141428">
+    <state x="528" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589161712404">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="528" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1588567141428" />
+    <state x="528" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1589161712404" />
+    <state x="564" y="188" key="refactoring.ChangeSignatureDialog" timestamp="1588978710107">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="564" y="188" key="refactoring.ChangeSignatureDialog/0.0.1440.860@0.0.1440.860" timestamp="1588978710107" />
+    <state x="379" y="197" key="run.anything.popup" timestamp="1588992251751">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="379" y="197" key="run.anything.popup/0.0.1440.860@0.0.1440.860" timestamp="1588992251751" />
+    <state x="390" y="188" width="672" height="678" key="search.everywhere.popup" timestamp="1588993150492">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="390" y="188" width="672" height="678" key="search.everywhere.popup/0.0.1440.860/2880.420.1920.1040@0.0.1440.860" timestamp="1588993150492" />
+    <state x="386" y="184" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1588977382871" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Runner.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/APCS2020Final$Main.ic" NAME="Main Coverage Results" MODIFIED="1588981240107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

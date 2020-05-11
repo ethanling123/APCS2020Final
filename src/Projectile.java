@@ -40,7 +40,12 @@ public class Projectile extends Actor{
 			return false;
 		}
 	}
-	
+
+	/**
+	 * 
+	 * @param hurtActor
+	 * @return
+	 */
 	public boolean damageActor(Actor hurtActor)
 	{
 		if(hurtActor instanceof DamagableInterface)
