@@ -1,4 +1,6 @@
 import javax.swing.ImageIcon;
+import java.awt.*;
+import java.net.URL;
 
 /**
  * A projectile class that moves and deals damage when overlapping another actor. Starts with an initial velocity.
@@ -23,9 +25,17 @@ public class Projectile extends Actor{
 	 * @param bShouldDieOnHit whether or not the projectile deletes itself from the game after colliding with another actor
 	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game)
 	 */
-	public Projectile(int x, int y, int r, ImageIcon i, int xv, int yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
+	public Projectile(int x, int y, int r, URL i, int xv, int yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
 		super(x, y, r, i, xv, yv);
 		
+		damage = dmg;
+		summoner = caster;
+		shouldDieOnHit = bShouldDieOnHit;
+	}
+
+	public Projectile(int x, int y, int r, Image i, int xv, int yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
+		super(x, y, r, i, xv, yv);
+
 		damage = dmg;
 		summoner = caster;
 		shouldDieOnHit = bShouldDieOnHit;
@@ -66,6 +76,28 @@ public class Projectile extends Actor{
 	public ClassLoader getClassLoader() {
 		return this.getClassLoader();
 	}
+	
+	/**
+	 * Returns this projectile's damage
+	 * @return damage
+	 */
+	public float getDmg() {
+		return damage;
+	}
+
+	public boolean fromPlayer() {
+		if(summoner instanceof Player) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public Actor getSummoner() {
+		return summoner;
+	}
+
 
 	/**
 	 * Constructs a projectile
@@ -77,30 +109,11 @@ public class Projectile extends Actor{
 	 * @param yv the y-velocity of the projectile
 	 * @param dmg the amount of damage dealt by this projectile
 	 * @param bShouldDieOnHit whether or not the projectile deletes itself from the game after colliding with another actor
-	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game)
-	 */
+	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game
+	 * **/
 	public Projectile makeProjectile(int x, int y, int xv, int yv, Actor caster) {
-		return new Projectile (x, y, super.getRadius(), super.getImageIcon(), xv, yv, damage, shouldDieOnHit, caster);
-	}
-	
-	/**
-	 * Returns this projectile's damage
-	 * @return damage
-	 */
-	public float getDmg() {
-		return damage;
+		return new Projectile (x, y, super.getRadius(), super.getImage(), xv, yv, damage, shouldDieOnHit, caster);
 	}
 
-	public boolean fromPlayer() {
-		if(summoner instanceof PlayerCharacter) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
-	public Actor getSummoner() {
-		return summoner;
-	}
+
 }

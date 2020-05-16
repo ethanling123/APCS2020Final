@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
  * @author Hangyul Yun
  *
  */
-public class PlayerCharacter extends GameCharacter {
+public class Player extends GameCharacter {
 	
 	int points;
 
@@ -19,9 +19,8 @@ public class PlayerCharacter extends GameCharacter {
 	 * @param shotType the type of projectile the player shoots.
 	 */
 
-	public PlayerCharacter(int x, int y, int r, ImageIcon i, float health, Projectile shotType) {
-		super(x, y, r, i, health, shotType);
-		
+	public Player(int x, int y, int r, float health, Projectile shotType) {
+		super(x, y, r, Player.class.getResource("/assets/icon.png"), health, shotType);
 		points = 0;
 	}
 	
@@ -48,8 +47,7 @@ public class PlayerCharacter extends GameCharacter {
 	 * sets the current amount of points the player has.
 	 * @para the amount of points the player currently has.
 	 */
-	public void setPoints(int p)
-	{
+	public void setPoints(int p) {
 		points=p;
 	}
 
