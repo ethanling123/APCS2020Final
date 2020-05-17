@@ -223,7 +223,14 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 
     @Override
     public void mouseClicked(MouseEvent arg0) {
-        // TODO Auto-generated method stub
+        float xDir = arg0.getX() - player.getxCord();
+        float yDir = arg0.getY() - player.getyCord();
+        
+        float directionMagnitude = (float) Math.sqrt((xDir * xDir) + (yDir * yDir));
+        xDir /= directionMagnitude;
+        yDir /= directionMagnitude;
+        
+        player.shootProjectile(screen, player, xDir, yDir);
     }
 
     @Override

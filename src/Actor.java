@@ -10,10 +10,10 @@ import javax.swing.ImageIcon;
  * @version 05/02/2020
  */
 public class Actor {
-    private int x;
-    private int y;
-    private int xVelo;
-    private int yVelo;
+    private float x;
+    private float y;
+    private float xVelo;
+    private float yVelo;
     private int radius;
     private Image img;
 
@@ -25,7 +25,7 @@ public class Actor {
      * @param r the radius of the actor's hitbox
      * @param i the image to represent the actor on the screen
      */
-    public Actor(int x, int y, int r, Image i) {
+    public Actor(float x, float y, int r, Image i) {
         this.x = x;
         this.y = y;
         radius = r;
@@ -44,23 +44,22 @@ public class Actor {
      * @param xv the initial x-velocity of the actor
      * @param yv the initial y-velocity of the actor
      */
-    public Actor(int x, int y, int r, Image i, int xv, int yv) {
+    public Actor(float x, float y, int r, Image i, float xv, float yv) {
         this.x = x;
         this.y = y;
         radius = r;
-        img = (new ImageIcon(i)).getImage();
+        img = i;
         xVelo = xv;
         yVelo = yv;
     }
 
-    public Actor(int x, int y, int r, URL i) {
+    public Actor(float x, float y, int r, URL i) {
         this(x, y, r, new ImageIcon(i).getImage());
     }
 
-    public Actor(int x, int y, int r, URL i, int xv, int yv) {
+    public Actor(float x, float y, int r, URL i, float xv, float yv) {
         this(x, y, r, new ImageIcon(i).getImage(), xv, yv);
     }
-
 
     /**
      * Whether or not this actor is intersecting any other actors
@@ -78,7 +77,7 @@ public class Actor {
      *
      * @return the x-coordinate for the actor
      */
-    public int getxCord() {
+    public float getxCord() {
         return x;
     }
 
@@ -87,7 +86,7 @@ public class Actor {
      *
      * @return the y-coordinate for the actor
      */
-    public int getyCord() {
+    public float getyCord() {
         return y;
     }
 
@@ -134,7 +133,7 @@ public class Actor {
      *
      * @return xVelocity
      */
-    public int getXVelocity() {
+    public float getXVelocity() {
         return xVelo;
     }
 
@@ -143,7 +142,7 @@ public class Actor {
      *
      * @return yVelocity
      */
-    public int getYVelocity() {
+    public float getYVelocity() {
         return yVelo;
     }
 
@@ -162,7 +161,7 @@ public class Actor {
      * @param g
      */
     public void draw(ImageObserver io, Graphics g) {
-        g.drawImage(img, x - radius, y - radius, 2 * radius, 2 * radius, io);
+        g.drawImage(img, (int)(x - radius), (int)(y - radius), 2 * radius, 2 * radius, io);
     }
 
     public Image getImage() {

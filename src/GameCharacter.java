@@ -44,7 +44,7 @@ public class GameCharacter extends Actor implements DamagableInterface {
      *
      * @param screen
      */
-    public void shootProjectile(ArrayList<Projectile> screen, Actor shooter, int xv, int yv) {
+    public void shootProjectile(ArrayList<Projectile> screen, Actor shooter, float xv, float yv) {
         try {
             if (projectileType != null) {
                 Projectile spawnedProjectile = projectileType.makeProjectile(shooter.getxCord(),

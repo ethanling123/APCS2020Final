@@ -25,7 +25,7 @@ public class Projectile extends Actor{
 	 * @param bShouldDieOnHit whether or not the projectile deletes itself from the game after colliding with another actor
 	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game)
 	 */
-	public Projectile(int x, int y, int r, URL i, int xv, int yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
+	public Projectile(float x, float y, int r, URL i, float xv, int yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
 		super(x, y, r, i, xv, yv);
 		
 		damage = dmg;
@@ -33,7 +33,7 @@ public class Projectile extends Actor{
 		shouldDieOnHit = bShouldDieOnHit;
 	}
 
-	public Projectile(int x, int y, int r, Image i, int xv, int yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
+	public Projectile(float x, float y, int r, Image i, float xv, float yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
 		super(x, y, r, i, xv, yv);
 
 		damage = dmg;
@@ -111,7 +111,7 @@ public class Projectile extends Actor{
 	 * @param bShouldDieOnHit whether or not the projectile deletes itself from the game after colliding with another actor
 	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game
 	 * **/
-	public Projectile makeProjectile(int x, int y, int xv, int yv, Actor caster) {
+	public Projectile makeProjectile(float x, float y, float xv, float yv, Actor caster) {
 		return new Projectile (x, y, super.getRadius(), super.getImage(), xv, yv, damage, shouldDieOnHit, caster);
 	}
 
