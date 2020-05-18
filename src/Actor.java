@@ -1,3 +1,5 @@
+import processing.core.PApplet;
+
 import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.net.URL;
@@ -9,13 +11,14 @@ import javax.swing.ImageIcon;
  * @author John
  * @version 05/02/2020
  */
-public class Actor {
+public class Actor extends PApplet {
     private float x;
     private float y;
     private float xVelo;
     private float yVelo;
     private int radius;
     private Image img;
+    private String path = "";
 
     /**
      * Constructor for an actor with an initial velocity of <0,0>
@@ -54,11 +57,21 @@ public class Actor {
     }
 
     public Actor(float x, float y, int r, URL i) {
-        this(x, y, r, new ImageIcon(i).getImage());
+        //this(x, y, r, new ImageIcon(i).getImage());
+        this.x = x;
+        this.y = y;
+        radius = r;
+        path = i.getPath();
     }
 
     public Actor(float x, float y, int r, URL i, float xv, float yv) {
-        this(x, y, r, new ImageIcon(i).getImage(), xv, yv);
+        //this(x, y, r, new ImageIcon(i).getImage(), xv, yv);
+        this.x = x;
+        this.y = y;
+        radius = r;
+        path = i.getPath();
+        xVelo = xv;
+        yVelo = yv;
     }
 
     /**
@@ -154,14 +167,9 @@ public class Actor {
         y += yVelo;
     }
 
-    /**
-     * Draw the actor on screen.
-     *
-     * @param io
-     * @param g
-     */
-    public void draw(ImageObserver io, Graphics g) {
-        g.drawImage(img, (int)(x - radius), (int)(y - radius), 2 * radius, 2 * radius, io);
+
+    public void draw(DrawingSurface surface) {
+        surface.image(surface.loadImage(path), (int)(x - radius), (int)(y - radius), 2 * radius, 2 * radius);
     }
 
     public Image getImage() {

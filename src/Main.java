@@ -29,14 +29,10 @@ public class Main {
 		JFrame window = (JFrame)canvas.getFrame();
 		canvas.requestFocus();
 
-
-
-
         window.setBounds(150, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
         window.setExtendedState(window.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //Panel
         Runner panel = new Runner();
         panel.setBackground(background);
         Container c = window.getContentPane();
