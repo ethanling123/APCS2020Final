@@ -1,7 +1,4 @@
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -10,17 +7,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
 import java.util.ArrayList;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.net.URL;
-import java.util.ArrayList;
 
 
-public class SecondScreen extends Screen implements ActionListener, KeyListener, MouseListener {
+public class SecondScreen extends Screen{
 
     private static final long serialVersionUID = 1L;
 
@@ -40,7 +30,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
     private Enemy lil;
     private ArrayList<Enemy> generalEnemies;
     private ArrayList<Enemy> enemies;
-    private ArrayList<Projectile> screen;
+    private ArrayList<Projectile> proj;
 
     private DrawingSurface surface;
 
@@ -55,8 +45,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
         player.setProjectile(lemon);
         generalEnemies = new ArrayList<Enemy>();
         enemies = new ArrayList<Enemy>();
-        screen = new ArrayList<Projectile>();
-        screen.add(new Asteroid(50, 50, 10, 0, 5, 10, 5));
+        proj = new ArrayList<Projectile>();
         generalEnemies.add(lil);
         this.surface = surface;
 
@@ -81,11 +70,11 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
         collide();
 
         this.player.draw(surface);
-        enemies.forEach((a) -> a.draw(surface));
-        screen.forEach((a) -> a.draw(surface));
+//        enemies.forEach((a) -> a.draw(surface));
+        proj.forEach((a) -> a.draw(surface));
 
         // Change stuff
-        int moveSpeed = 1;
+        int moveSpeed = 3;
         if (surface.isPressed(KeyEvent.VK_W)) {
             if (player.getYVelocity() >= moveSpeed * -3) {
                 player.addYVelocity(-moveSpeed);
@@ -129,7 +118,15 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
             if (!cd) {
                 cd = true;
                 this.cdStart = seconds;
-                player.shootProjectile(screen, player, 0, -10);
+                System.out.println("test");
+                float xDir = surface.mouseX - player.getxCord();
+                float yDir = surface.mouseY - player.getyCord();
+
+                float directionMagnitude = (float) Math.sqrt((xDir * xDir) + (yDir * yDir));
+                xDir /= directionMagnitude;
+                yDir /= directionMagnitude;
+
+                player.shootProjectile(proj, player, xDir, yDir);
             }
         }
 
@@ -156,13 +153,12 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
                 }
             }
         }
-        if (screen.equals(null)) {
-            for (Projectile e : screen) {
+        if (proj.equals(null)) {
+            for (Projectile e : proj) {
                 if (e.equals(null)) {
-                    System.out.println("a fd");
                 }
                 if (e.getyCord() - e.getRadius() > window.getHeight()) {
-                    screen.remove(e);
+                    proj.remove(e);
                 }
             }
         }
@@ -196,7 +192,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
                 }
             }
         }
-        for (Projectile e : screen) {
+        for (Projectile e : proj) {
             if (e.fromPlayer()) {
                 for (Enemy a : enemies) {
                     if (e.isIntersecting(a)) {
@@ -227,88 +223,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
     private void act() {
         player.act();
         enemies.forEach((a) -> a.act());
-        screen.forEach((a) -> a.act());
-    }
-
-    @Override
-    public void mouseClicked(MouseEvent arg0) {
-        float xDir = arg0.getX() - player.getxCord();
-        float yDir = arg0.getY() - player.getyCord();
-
-        float directionMagnitude = (float) Math.sqrt((xDir * xDir) + (yDir * yDir));
-        xDir /= directionMagnitude;
-        yDir /= directionMagnitude;
-
-        player.shootProjectile(screen, player, xDir, yDir);
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void mouseExited(MouseEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void mousePressed(MouseEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void keyPressed(KeyEvent arg) {
-        System.out.println("prin");
-        if (arg.getKeyCode() == KeyEvent.VK_W) {
-            pressedUp = true;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_A) {
-            pressedLeft = true;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_S) {
-            pressedDown = true;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_D) {
-            pressedRight = true;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_SPACE) {
-            pressedShoot = true;
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent arg) {
-        if (arg.getKeyCode() == KeyEvent.VK_W) {
-            pressedUp = false;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_A) {
-            pressedLeft = false;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_S) {
-            pressedDown = false;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_D) {
-            pressedRight = false;
-        }
-        if (arg.getKeyCode() == KeyEvent.VK_SPACE) {
-            pressedShoot = false;
-        }
-    }
-
-    @Override
-    public void keyTyped(KeyEvent arg) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent arg0) {
-
+        proj.forEach((a) -> a.act());
     }
 
     public void run(JFrame window) {
