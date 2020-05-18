@@ -32,20 +32,13 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
     }
 
     public void settings() {
-        loadImage("/assets/lemon.png");
-        loadImage("/assets/icon.png");
-        loadImage("/assets/norm.png");
-        loadImage("/assets/lil.png");
         // size(DRAWING_WIDTH, DRAWING_HEIGHT, P2D);
-        size(activeScreen.displayWidth, activeScreen.displayHeight);
+//        size(activeScreen.displayWidth, activeScreen.displayHeight);
+        fullScreen();
     }
 
     public void setup() {
-        loadImage("/assets/lemon.png");
-        loadImage("/assets/icon.png");
-        loadImage("/assets/norm.png");
-        loadImage("/assets/lil.png");
-        surface.setResizable(true);
+        surface.setResizable(false);
         for (Screen s : screens)
             s.setup();
     }

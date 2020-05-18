@@ -17,25 +17,7 @@ public class Actor extends PApplet {
     private float xVelo;
     private float yVelo;
     private int radius;
-    private Image img;
     private String path = "";
-
-    /**
-     * Constructor for an actor with an initial velocity of <0,0>
-     *
-     * @param x the initial x-coordinates for an actor
-     * @param y the initial y-coordinates for an actor
-     * @param r the radius of the actor's hitbox
-     * @param i the image to represent the actor on the screen
-     */
-    public Actor(float x, float y, int r, Image i) {
-        this.x = x;
-        this.y = y;
-        radius = r;
-        img = i;
-        xVelo = 0;
-        yVelo = 0;
-    }
 
     /**
      * Constructor for an actor with an initial velocity.
@@ -47,13 +29,21 @@ public class Actor extends PApplet {
      * @param xv the initial x-velocity of the actor
      * @param yv the initial y-velocity of the actor
      */
-    public Actor(float x, float y, int r, Image i, float xv, float yv) {
+    public Actor(float x, float y, int r, String i, float xv, float yv) {
         this.x = x;
         this.y = y;
         radius = r;
-        img = i;
+        path = i;
         xVelo = xv;
         yVelo = yv;
+    }
+
+    public Actor(float x, float y, int r, String i) {
+        //this(x, y, r, new ImageIcon(i).getImage());
+        this.x = x;
+        this.y = y;
+        radius = r;
+        path = i;
     }
 
     public Actor(float x, float y, int r, URL i) {
@@ -172,8 +162,8 @@ public class Actor extends PApplet {
         surface.image(surface.loadImage(path), (int)(x - radius), (int)(y - radius), 2 * radius, 2 * radius);
     }
 
-    public Image getImage() {
-        return img;
+    public String getPath() {
+        return path;
     }
 
 //	/**

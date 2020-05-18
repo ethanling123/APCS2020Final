@@ -32,18 +32,13 @@ public class Main {
         window.setBounds(150, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
         window.setExtendedState(window.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        Runner panel = new Runner();
-        panel.setBackground(background);
         Container c = window.getContentPane();
-        c.add(panel);
+
         window.setMinimumSize(new Dimension(100,100));
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(true);
         window.setVisible(true);
         window.setIconImage(img.getImage());
-        window.addKeyListener(panel);
-        window.addMouseListener(panel);
-        panel.run(window);
+
     }
 }

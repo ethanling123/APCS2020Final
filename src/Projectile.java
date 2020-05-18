@@ -25,7 +25,7 @@ public class Projectile extends Actor{
 	 * @param bShouldDieOnHit whether or not the projectile deletes itself from the game after colliding with another actor
 	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game)
 	 */
-	public Projectile(float x, float y, int r, URL i, float xv, int yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
+	public Projectile(float x, float y, int r, URL i, float xv, float yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
 		super(x, y, r, i, xv, yv);
 		
 		damage = dmg;
@@ -33,14 +33,14 @@ public class Projectile extends Actor{
 		shouldDieOnHit = bShouldDieOnHit;
 	}
 
-	public Projectile(float x, float y, int r, Image i, float xv, float yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
+	public Projectile(float x, float y, int r, String i, float xv, float yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
 		super(x, y, r, i, xv, yv);
 
 		damage = dmg;
 		summoner = caster;
 		shouldDieOnHit = bShouldDieOnHit;
 	}
-	
+
 	@Override
 	public boolean isIntersecting(Actor other) {
 		if(super.isIntersecting(other))
@@ -103,16 +103,12 @@ public class Projectile extends Actor{
 	 * Constructs a projectile
 	 * @param x the starting x-location of the projectile
 	 * @param y the starting y-location of the projectile
-	 * @param r the radius of the projectile's hitbox.
-	 * @param i the image to represent the projectile on screen
 	 * @param xv the x-velocity of the projectile
 	 * @param yv the y-velocity of the projectile
-	 * @param dmg the amount of damage dealt by this projectile
-	 * @param bShouldDieOnHit whether or not the projectile deletes itself from the game after colliding with another actor
 	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game
 	 * **/
 	public Projectile makeProjectile(float x, float y, float xv, float yv, Actor caster) {
-		return new Projectile (x, y, super.getRadius(), super.getImage(), xv, yv, damage, shouldDieOnHit, caster);
+		return new Projectile (x, y, super.getRadius(), super.getPath(), xv, yv, damage, shouldDieOnHit, caster);
 	}
 
 

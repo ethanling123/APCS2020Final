@@ -31,7 +31,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
     private static int highScore;
     private int health = 100;
 
-    private double iFramesStart, startTime, cdStart, spawnStart, seconds;
+    private double iFramesStart, startTime, cdStart, spawnStart, seconds, frames;
 
     private boolean spawn, iFrames, cd, pressedUp, pressedDown, pressedLeft, pressedRight, pressedShoot;
 
@@ -63,6 +63,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
     }
 
     public void draw() {
+        frames++;
         surface.pushStyle();
         surface.rect((int) (super.displayWidth * 7.5 / 9), 0, (super.displayWidth), super.displayHeight);
         surface.background(170);
@@ -73,6 +74,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
         surface.text("Score: " + player.getPoints(), (int) (super.displayWidth * 7.7 / 9), super.displayHeight / 9);
         surface.text("High Score: " + highScore, (int) (super.displayWidth * 7.7 / 9), super.displayHeight * 2 / 9);
         surface.text("Health: " + player.getHealth(), (int) (super.displayWidth * 7.7 / 9), super.displayHeight * 5 / 9);
+        surface.text("Frames: " + frames, (int) (super.displayWidth * 7.7 / 9), super.displayHeight * 6 / 9);
 
         surface.popStyle();
         act();
@@ -80,7 +82,7 @@ public class SecondScreen extends Screen implements ActionListener, KeyListener,
 
         this.player.draw(surface);
         enemies.forEach((a) -> a.draw(surface));
-        //screen.forEach((a) -> a.draw(surface));
+        screen.forEach((a) -> a.draw(surface));
 
         // Change stuff
         int moveSpeed = 1;
