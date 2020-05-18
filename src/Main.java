@@ -1,5 +1,8 @@
 //Imports
 
+import processing.awt.PSurfaceAWT;
+import processing.core.PApplet;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -18,7 +21,17 @@ public class Main {
     //Main Method
     public static void main(String[] args) {
         //Window
-        JFrame window = new JFrame("Spaceteroids");
+
+        DrawingSurface drawing = new DrawingSurface();
+		PApplet.runSketch(new String[]{""}, drawing);
+		PSurfaceAWT surf = (PSurfaceAWT) drawing.getSurface();
+		PSurfaceAWT.SmoothCanvas canvas = (PSurfaceAWT.SmoothCanvas) surf.getNative();
+		JFrame window = (JFrame)canvas.getFrame();
+		canvas.requestFocus();
+
+
+
+
         window.setBounds(150, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
         window.setExtendedState(window.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,8 +41,11 @@ public class Main {
         panel.setBackground(background);
         Container c = window.getContentPane();
         c.add(panel);
-        window.setIconImage(img.getImage());
+        window.setMinimumSize(new Dimension(100,100));
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(true);
         window.setVisible(true);
+        window.setIconImage(img.getImage());
         window.addKeyListener(panel);
         window.addMouseListener(panel);
         panel.run(window);

@@ -3,4 +3,7 @@
 	<output-test url="file://$MODULE_DIR$/out/test/APCS2020Final"/>
 	<exclude-output/>
 	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="core.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/core.jar!/"/>
+	</lib>
 </component>
