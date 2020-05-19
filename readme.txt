@@ -9,6 +9,17 @@ Talk with your group. Consider drawing some pictures of what you think your proj
 
 Authors: Ethan, Han, John
 Revision: 4/10/20
+AP Computer Science Final Project - README Template
+Instructions:
+The first step in creating an excellent APCS final project is to write up a README. At this stage, this README file acts as your project proposal. Once you’ve filled in all components, Shelby will read through it and suggest edits. Ultimately, you need a document that adequately describes your project idea and we must agree on this plan.
+Have one member of your group make a copy of this Google Doc. Then, they should share it with all other members so that every group member has edit permissions.
+There’s a lot of parts of this document that you might not have full answers for yet. Because you haven’t written the program yet, it’s difficult to think about the instructions or which group members will do which parts. Even though this is hard to think about, you must have something in these sections that act as your current plan. However, during the course of the project, you’ll continuously update this document. This means that you will not be held to exactly what you put here - components of this document can change (and it’s pretty common!).
+There is one exception: the Features List section. Once Shelby OKs your README, the Features List section cannot be modified. For this reason, it is most important that you get a solid idea of what you want to make and the primary features it will have now.
+Talk with your group. Consider drawing some pictures of what you think your project might look like. Be precise. When you’re ready, fill this out together. Each component in brackets below ( [these things] ) should be replaced with your ideas. Note that there are several sample READMEs posted on this assignment for you to use as guidance.
+-------------------When README is finalized, remove everything above this line--------------------
+
+Authors: Ethan, Han, John
+Revision: 4/10/20
 Introduction: 
 [In a few paragraphs totaling about ½ page, introduce the high-level concept of your program. What this looks like depends a lot on what type of thing you are making. An introduction for an application will look different than one for a game. In general, your introduction should address questions like these:
 What does your program do?
@@ -39,13 +50,15 @@ First the player will have to navigate a title menu screen before being able to 
 Features List (THE ONLY SECTION THAT CANNOT CHANGE LATER):
 Must-have Features:
 [These are features that we agree you will definitely have by the project due date. A good final project would have all of these completed. At least 5 are required. Each feature should be fully described (at least a few full sentences for each)]
- A moveable character that is controlled by the player. The player would have to control the character and prevent losing life points.
+ A moveable character that is controlled by the player. The player would have to control the character and prevent losing life points. 
 Projectiles are easily the most important component in the game, as the screen will often be covered by these for difficulty and challenge.
  In order to make the game more difficult, we will also have enemies that attack the player. These enemies will attempt to damage the player until the player dies. 
 In order to add some progression, the enemies will become harder as the player progresses through the game.  
 We will also have a scoring mechanism. As the player progresses, the game will keep track of how many points they have gained and store the highest score. 
 Points increase from certain collectibles (which are in turn dropped by defeated enemies or other players), and through grazing (getting close to bullets but not to the point where they deal damage). Likewise, score is lost with each hit taken.
 A title screen is required for the player to navigate prior to launching the main game campaign.
+
+
 
 
 Want-to-have Features:
@@ -63,14 +76,28 @@ Character Selection would feature multiple characters that the player can choose
 
 Class List:
 [This section lists the Java classes that make up the program and very briefly describes what each represents. It’s totally fine to put this section in a list format and not to use full sentences.]
+Actor
+    Projectile
+        Asteroid
+    GameCharacter
+        Enemy
+        Player
+Runner
+Screen (Abstract)
+    FirstScreen
+    SecondScreen
+DrawingSurface
+Screen Switcher(Interface)
+DamagableImterface(Interface)
+Main
 
 Credits:
 [Gives credit for project components. This includes both internal credit (your group members) and external credit (other people, websites, libraries). To do this:
 List the group members and describe how each member contributed to the completion of the final program. This could be classes written, art assets created, leadership/organizational skills exercises, or other tasks. Initially, this is how you plan on splitting the work.
-Han:
-John:
-Ethan:
+Han: Created framework for GameCharacter, Player, Asteroid, and Projectile, create DamagableInterface, Implement Shooting, updated UML and ReadMe as needed.
+John: Created the base actor class, created all necessary assets for the game, helped with implementing shooting and movement.
+Ethan: Handle Main Menu, Player point counter (part of the UI), Main Menu screen, and the Drawing Surface on which the graphics are drawn.
 Give credit to all outside resources used. This includes downloaded images or sounds, external java libraries, parent/tutor/student coding help, etc.]
 We used Mr. Shelby’s MovingImage class to help code for the entities. 
 We also used some super classes from our previous projects
-
+Our Icon for the game itself is a stock image of a space ship.
