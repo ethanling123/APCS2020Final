@@ -17,9 +17,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 
     public DrawingSurface() {
         screens = new ArrayList<Screen>();
-
         keys = new ArrayList<Integer>();
-
 
         FirstScreen screen1 = new FirstScreen(this);
         screens.add(screen1);
@@ -38,7 +36,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
     }
 
     public void setup() {
-        surface.setResizable(false);
+        surface.setResizable(true);
         for (Screen s : screens)
             s.setup();
     }

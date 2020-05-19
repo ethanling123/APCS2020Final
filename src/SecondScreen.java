@@ -70,7 +70,7 @@ public class SecondScreen extends Screen{
         collide();
 
         this.player.draw(surface);
-//        enemies.forEach((a) -> a.draw(surface));
+        enemies.forEach((a) -> a.draw(surface));
         proj.forEach((a) -> a.draw(surface));
 
         // Change stuff
@@ -118,11 +118,10 @@ public class SecondScreen extends Screen{
             if (!cd) {
                 cd = true;
                 this.cdStart = seconds;
-                System.out.println("test");
                 float xDir = surface.mouseX - player.getxCord();
                 float yDir = surface.mouseY - player.getyCord();
-
                 float directionMagnitude = (float) Math.sqrt((xDir * xDir) + (yDir * yDir));
+
                 xDir /= directionMagnitude;
                 yDir /= directionMagnitude;
 
