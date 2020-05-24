@@ -25,6 +25,7 @@ public class Projectile extends Actor{
 	 * @param bShouldDieOnHit whether or not the projectile deletes itself from the game after colliding with another actor
 	 * @param caster the character that created this projectile (null if the projectile spawned by itself into the game)
 	 */
+	/*
 	public Projectile(float x, float y, int r, URL i, float xv, float yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
 		super(x, y, r, i, xv, yv);
 		
@@ -32,7 +33,7 @@ public class Projectile extends Actor{
 		summoner = caster;
 		shouldDieOnHit = bShouldDieOnHit;
 	}
-
+	*/
 	public Projectile(float x, float y, int r, String i, float xv, float yv, float dmg, boolean bShouldDieOnHit, Actor caster) {
 		super(x, y, r, i, xv, yv);
 

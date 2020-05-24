@@ -21,7 +21,7 @@ public class GameCharacter extends Actor implements DamagableInterface {
      * @param health   the health of the character
      * @param shotType the type of projectile the character shoots.
      */
-    public GameCharacter(int x, int y, int r, URL i, float health, Projectile shotType) {
+    public GameCharacter(int x, int y, int r, String i, float health, Projectile shotType) {
         super(x, y, r, i);
 
         this.health = health;

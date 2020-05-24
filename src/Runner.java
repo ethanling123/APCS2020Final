@@ -25,7 +25,7 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 
     private boolean spawn, iFrames, cd, pressedUp, pressedDown, pressedLeft, pressedRight, pressedShoot;
 
-    private URL lemonImg;
+    private String lemonImg;
     private Player player;
     private Enemy lil;
     private ArrayList<Enemy> generalEnemies;
@@ -34,7 +34,7 @@ public class Runner extends JPanel implements ActionListener, KeyListener, Mouse
 
     public Runner() {
         startTime = System.nanoTime();
-        lemonImg = Main.class.getResource("/assets/lemon.png");
+        lemonImg = "assets/lemon.png";
         player = new Player(Main.DRAWING_WIDTH / 2, Main.DRAWING_HEIGHT / 2, 25, health, null);
         lil = new Enemy(0, 0, 25, 10, 5, 2, null, "lil enemy");
         lil.addYVelocity(3);

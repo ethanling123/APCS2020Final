@@ -19,7 +19,7 @@ public class Asteroid extends Projectile implements DamagableInterface {
     // == CONSTRUCTOR ==
     
     public Asteroid(int x, int y, int r, int xv, int yv, float dmg, float health) {
-		super(x, y, r, Asteroid.class.getResource("/assets/norm.png"), xv, yv, dmg, true, null);
+		super(x, y, r, "assets/norm.png", xv, yv, dmg, true, null);
 		
 		this.health = health;
 	}

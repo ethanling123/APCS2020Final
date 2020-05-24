@@ -7,7 +7,7 @@ public class Enemy extends GameCharacter implements DamagableInterface {
                  float health,
                  float shotDmg, float hitDmg,
                  Projectile shotType, String name) {
-        super(x, y, r, Enemy.class.getResource("/assets/lil.png"), health, shotType);
+        super(x, y, r, "assets/lil.png", health, shotType);
         this.hitDmg = hitDmg;
         this.shotDmg = shotDmg;
         this.name = name;

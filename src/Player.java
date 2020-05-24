@@ -20,7 +20,7 @@ public class Player extends GameCharacter {
 	 */
 
 	public Player(int x, int y, int r, float health, Projectile shotType) {
-		super(x, y, r, Player.class.getResource("/assets/icon.png"), health, shotType);
+		super(x, y, r, "assets/icon.png", health, shotType);
 		points = 0;
 	}
 	

@@ -15,7 +15,7 @@ public class SecondScreen extends Screen{
     private static final long serialVersionUID = 1L;
 
     // ==FIELDS==
-    private static final float COOLDOWN_MAX = (float) 0.5;
+    private static final float COOLDOWN_MAX = 0.5f;
     private static final float IFRAMECOUNT = 3;
     private static final float SPAWNCD = 1;
     private static int highScore;
@@ -25,7 +25,7 @@ public class SecondScreen extends Screen{
 
     private boolean spawn, iFrames, cd, pressedUp, pressedDown, pressedLeft, pressedRight, pressedShoot;
 
-    private URL lemonImg;
+    private String lemonImg;
     private Player player;
     private Enemy lil;
     private ArrayList<Enemy> generalEnemies;
@@ -37,7 +37,7 @@ public class SecondScreen extends Screen{
     public SecondScreen(DrawingSurface surface) {
         super(800, 600);
         startTime = System.nanoTime();
-        lemonImg = Main.class.getResource("/assets/lemon.png");
+        lemonImg = "assets/lemon.png";
         player = new Player(Main.DRAWING_WIDTH / 2, Main.DRAWING_HEIGHT / 2, 25, health, null);
         lil = new Enemy(0, 0, 25, 10, 5, 2, null, "lil enemy");
         lil.addYVelocity(3);

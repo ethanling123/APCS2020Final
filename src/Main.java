@@ -17,6 +17,7 @@ public class Main {
     public static final int DRAWING_HEIGHT = 750; //Height of Window
     private static final Color background = new Color(94, 99, 112);
     private static ImageIcon img = new ImageIcon(Main.class.getResource("/assets/icon.png"));
+    //private static ImageIcon img = new ImageIcon(Main.class.getResource("/assets/icon.png"));
 
     //Main Method
     public static void main(String[] args) {

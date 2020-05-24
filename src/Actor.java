@@ -1,4 +1,6 @@
 import processing.core.PApplet;
+import processing.core.PConstants;
+import processing.core.PImage;
 
 import java.awt.*;
 import java.awt.image.ImageObserver;
@@ -46,6 +48,7 @@ public class Actor extends PApplet {
         path = i;
     }
 
+    /*
     public Actor(float x, float y, int r, URL i) {
         //this(x, y, r, new ImageIcon(i).getImage());
         this.x = x;
@@ -63,6 +66,7 @@ public class Actor extends PApplet {
         xVelo = xv;
         yVelo = yv;
     }
+    */
 
     /**
      * Whether or not this actor is intersecting any other actors
@@ -159,7 +163,11 @@ public class Actor extends PApplet {
 
 
     public void draw(DrawingSurface surface) {
-        surface.image(surface.loadImage(path), (int)(x - radius), (int)(y - radius), 2 * radius, 2 * radius);
+    	PImage image = surface.loadImage(path, "png");
+    	if(image != null)
+    	{
+    		surface.image(image, (int)(x - radius), (int)(y - radius), 2 * radius, 2 * radius);
+    	}
     }
 
     public String getPath() {
