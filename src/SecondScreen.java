@@ -191,34 +191,34 @@ public class SecondScreen extends Screen {
 
     private void collide() {
 
-        for (Enemy e : enemies) {
-            if (e.isIntersecting(player)) {
+        for (int e = 0; e < enemies.size(); e ++) {
+            if (enemies.get(e).isIntersecting(player)) {
                 if (!iFrames) {
                     this.iFramesStart = seconds;
                     iFrames = true;
                     player.setPoints(player.getPoints() - 1);
-                    if (e.damageActor(player)) {
-                        restartScreen("Killed by: " + e.getName());
+                    if (enemies.get(e).damageActor(player)) {
+                        restartScreen("Killed by: " + enemies.get(e).getName());
                     }
                 }
             }
         }
-        for (Projectile e : proj) {
-            if (e.fromPlayer()) {
-                for (Enemy a : enemies) {
-                    if (e.isIntersecting(a)) {
-                        if (e.damageActor(a)) {
+        for (int p = 0; p < proj.size(); p ++) {
+            if (proj.get(p).fromPlayer()) {
+                for (int e = 0; e < enemies.size(); e ++) {
+                    if (proj.get(p).isIntersecting(enemies.get(e))) {
+                        if (proj.get(p).damageActor(enemies.get(e))) {
                             player.killedActor();
-                            enemies.remove(a);
+                            enemies.remove(enemies.get(e));
                         }
                     }
                 }
-            } else if (e.isIntersecting(player)) {
+            } else if (proj.get(p).isIntersecting(player)) {
                 if (!iFrames) {
                     iFramesStart = seconds;
                     iFrames = true;
                     player.setPoints(player.getPoints() - 1);
-                    if (e.damageActor(player)) {
+                    if (proj.get(p).damageActor(player)) {
                         restartScreen("Killed by: an enemy bullet");
                     }
                 }
