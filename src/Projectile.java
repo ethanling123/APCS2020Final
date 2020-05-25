@@ -42,16 +42,6 @@ public class Projectile extends Actor{
 		shouldDieOnHit = bShouldDieOnHit;
 	}
 
-	@Override
-	public boolean isIntersecting(Actor other) {
-		if(super.isIntersecting(other))
-		{
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	/**
 	 * 
 	 * @param hurtActor

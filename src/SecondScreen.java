@@ -1,13 +1,7 @@
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.net.URL;
 import java.util.ArrayList;
-import javax.swing.JFrame;
 
 
 public class SecondScreen extends Screen {
@@ -19,7 +13,7 @@ public class SecondScreen extends Screen {
     private static final float IFRAMECOUNT = 3;
     private static final float SPAWNCD = 1;
     private static int highScore;
-    private int health = 100;
+    private int health = 15;
 
     private double iFramesStart, startTime, cdStart, spawnStart, seconds, frames;
 
@@ -68,12 +62,10 @@ public class SecondScreen extends Screen {
         surface.text("High Score: " + highScore, (int) (super.displayWidth * 7.7 / 9), super.displayHeight * 2 / 9);
         surface.text("Health: " + player.getHealth(), (int) (super.displayWidth * 7.7 / 9), super.displayHeight * 5 / 9);
         surface.text("Frames: " + frames, (int) (super.displayWidth * 7.7 / 9), super.displayHeight * 6 / 9);
-
         surface.popStyle();
+
         act();
         collide();
-
-        //if(frames % 5 <= 0)
         spawn();
 
         this.player.draw(surface);
@@ -135,7 +127,8 @@ public class SecondScreen extends Screen {
 
                 System.out.println(xDir + ", " + yDir);
 
-                player.shootProjectile(proj, player, xDir, yDir);
+                if(frames > 10)
+                    player.shootProjectile(proj, player, xDir, yDir);
             }
         }
 
@@ -143,6 +136,75 @@ public class SecondScreen extends Screen {
             surface.switchScreen(ScreenSwitcher.SCREEN1);
         }
     }
+
+    private void spawn() {
+        if ((frames % 20 == 0)) {
+                enemies.add(lil.makeEnemy((int) (Math.random() * this.displayWidth), 0));
+                enemies.get(enemies.size() - 1).addYVelocity(3);
+        }
+    }
+
+
+    private void collide() {
+        for (int e = 0; e < enemies.size(); e ++) {
+            if (enemies.get(e).isIntersecting(player)) {
+                if (!iFrames) {
+                    this.iFramesStart = seconds;
+                    iFrames = true;
+                    player.setPoints(player.getPoints() - 1);
+                    if (enemies.get(e).damageActor(player)) {
+                        restartScreen("Killed by: " + enemies.get(e).getName());
+                    }
+                }
+            }
+        }
+        for (int p = 0; p < proj.size(); p ++) {
+            if (proj.get(p).fromPlayer()) {
+                for (int e = 0; e < enemies.size(); e ++) {
+                    if (proj.get(p).isIntersecting(enemies.get(e))) {
+                        if (proj.get(p).damageActor(enemies.get(e))) {
+                            player.killedActor();
+                            enemies.remove(enemies.get(e));
+                        }
+                    }
+                }
+            } else if (proj.get(p).isIntersecting(player)) {
+                if (!iFrames) {
+                    iFramesStart = seconds;
+                    iFrames = true;
+                    player.setPoints(player.getPoints() - 1);
+                    if (proj.get(p).damageActor(player))
+                        restartScreen("Killed by: an enemy bullet");
+                }
+            }
+        }
+    }
+
+    private void restartScreen(String string) {
+        System.out.println(string);
+
+    }
+
+    private void act() {
+        player.act();
+        enemies.forEach((a) -> a.act());
+        proj.forEach((a) -> a.act());
+
+        for(int x = 0; x < enemies.size(); x++) {
+            if (player.getyCord() < enemies.get(x).getxCord())
+                    player.setPoints(player.getPoints() - 1);
+        }
+    }
+
+    /*
+    public void run(JFrame window) {
+        while (true) {
+            tick(window);
+            surface.redraw();
+        }
+    }
+    */
+
 
     /*
     private void tick(JFrame window) {
@@ -177,72 +239,6 @@ public class SecondScreen extends Screen {
             spawn = false;
             this.spawnStart = seconds;
             spawn(window);
-        }
-    }
-    */
-
-    private void spawn() {
-        if ((frames % 20 == 0)) {
-                enemies.add(lil.makeEnemy((int) (Math.random() * this.displayWidth), 0));
-                enemies.get(enemies.size() - 1).addYVelocity(3);
-        }
-    }
-
-
-    private void collide() {
-
-        for (int e = 0; e < enemies.size(); e ++) {
-            if (enemies.get(e).isIntersecting(player)) {
-                if (!iFrames) {
-                    this.iFramesStart = seconds;
-                    iFrames = true;
-                    player.setPoints(player.getPoints() - 1);
-                    if (enemies.get(e).damageActor(player)) {
-                        restartScreen("Killed by: " + enemies.get(e).getName());
-                    }
-                }
-            }
-        }
-        for (int p = 0; p < proj.size(); p ++) {
-            if (proj.get(p).fromPlayer()) {
-                for (int e = 0; e < enemies.size(); e ++) {
-                    if (proj.get(p).isIntersecting(enemies.get(e))) {
-                        if (proj.get(p).damageActor(enemies.get(e))) {
-                            player.killedActor();
-                            enemies.remove(enemies.get(e));
-                        }
-                    }
-                }
-            } else if (proj.get(p).isIntersecting(player)) {
-                if (!iFrames) {
-                    iFramesStart = seconds;
-                    iFrames = true;
-                    player.setPoints(player.getPoints() - 1);
-                    if (proj.get(p).damageActor(player)) {
-                        restartScreen("Killed by: an enemy bullet");
-                    }
-                }
-            }
-        }
-    }
-
-    private void restartScreen(String string) {
-        System.out.println(string);
-
-    }
-
-    private void act() {
-        player.act();
-
-        enemies.forEach((a) -> a.act());
-        proj.forEach((a) -> a.act());
-    }
-
-    /*
-    public void run(JFrame window) {
-        while (true) {
-            tick(window);
-            surface.redraw();
         }
     }
     */

@@ -48,26 +48,6 @@ public class Actor extends PApplet {
         path = i;
     }
 
-    /*
-    public Actor(float x, float y, int r, URL i) {
-        //this(x, y, r, new ImageIcon(i).getImage());
-        this.x = x;
-        this.y = y;
-        radius = r;
-        path = i.getPath();
-    }
-
-    public Actor(float x, float y, int r, URL i, float xv, float yv) {
-        //this(x, y, r, new ImageIcon(i).getImage(), xv, yv);
-        this.x = x;
-        this.y = y;
-        radius = r;
-        path = i.getPath();
-        xVelo = xv;
-        yVelo = yv;
-    }
-    */
-
     /**
      * Whether or not this actor is intersecting any other actors
      *
@@ -75,8 +55,7 @@ public class Actor extends PApplet {
      * @return whether or not this actor and the other actor are intersecting
      */
     public boolean isIntersecting(Actor other) {
-        boolean result = (Math.sqrt((Math.pow(Math.abs(this.x - other.x), 2) + Math.pow(Math.abs(this.x - other.x), 2))) - this.radius - other.radius) <= 0.00001;
-        return result;
+        return (Math.sqrt( (Math.pow(Math.abs(this.x - other.x), 2) + Math.pow(Math.abs(this.y - other.y), 2)) ) - this.radius - other.radius) <= 0.00001;
     }
 
     /**
