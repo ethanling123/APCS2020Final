@@ -38,6 +38,9 @@ public class FirstScreen extends Screen {
 		surface.textSize(24);
 		surface.text("Spaceteroids", super.displayWidth/3 + 65, super.displayHeight/3);
 
+		surface.textSize(16);
+		surface.text("Press space to return to title screen \nPress esc to exit", super.displayWidth/3 , 5 * super.displayHeight/6);
+
 		surface.popStyle();
 	}
 	

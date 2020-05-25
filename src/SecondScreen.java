@@ -151,9 +151,6 @@ public class SecondScreen extends Screen {
                 if (!iFrames) {
                     this.iFramesStart = seconds;
                     iFrames = true;
-                    if (enemies.get(e).damageActor(player)) {
-                        restartScreen("Killed by: " + enemies.get(e).getName());
-                    }
                 }
             }
             if (enemies.get(e).getyCord() > super.displayHeight) {
@@ -161,12 +158,14 @@ public class SecondScreen extends Screen {
                 player.setPoints(player.getPoints() - 10);
             }
         }
-        for (int p = 0; p < projectileList.size();) {
-            boolean removeE = false;
+        for (int p = 0; p < projectileList.size(); ) {
             boolean removeP = false;
             if (projectileList.get(p).fromPlayer()) {
                 for (int e = 0; e < enemies.size(); ) {
-                    if (projectileList.get(p).isIntersecting(enemies.get(e))) {
+                    boolean removeE = false;
+                    if (projectileList.size() == 0 || enemies.size() == 0 || enemies.size() == e || projectileList.size() == p)
+                        break;
+                  if (projectileList.get(p).isIntersecting(enemies.get(e))) {
                         if (projectileList.get(p).damageActor(enemies.get(e))) {
                             player.killedActor();
                             enemies.remove(e);
@@ -176,32 +175,22 @@ public class SecondScreen extends Screen {
                             removeP = true;
                         }
                     }
+                    if (projectileList.size() == 0 || enemies.size() == 0 || enemies.size() == e)
+                        break;
                     if (!removeE)
                         e++;
                 }
-
-
-            } else if (projectileList.get(p).isIntersecting(player)) {
-                if (!iFrames) {
-                    iFramesStart = seconds;
-                    iFrames = true;
-                    player.setPoints(player.getPoints() - 1);
-                    if (projectileList.get(p).damageActor(player))
-                        restartScreen("Killed by: an enemy bullet");
+                if (projectileList.size() == 0 || enemies.size() == 0 || projectileList.size() == p)
+                    break;
+                if (projectileList.get(p).getxCord() > super.displayWidth || projectileList.get(p).getxCord() < 0 ||
+                        projectileList.get(p).getyCord() > super.displayHeight || projectileList.get(p).getyCord() < 0) {
+                    projectileList.remove(p);
+                    removeP = true;
                 }
+                if (!removeP)
+                    p++;
             }
-            if (projectileList.get(p).getxCord() > super.displayWidth || projectileList.get(p).getxCord() < 0 ||
-                    projectileList.get(p).getyCord() > super.displayHeight || projectileList.get(p).getyCord() < 0) {
-                projectileList.remove(p);
-                removeP = true;
-            }
-            if (!removeP)
-                p++;
         }
-    }
-
-    private void restartScreen(String string) {
-        System.out.println(string);
     }
 
     private void act() {
