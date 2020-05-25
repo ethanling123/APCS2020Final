@@ -25,6 +25,9 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
         SecondScreen screen2 = new SecondScreen(this);
         screens.add(screen2);
 
+        CreditScreen screen3 = new CreditScreen(this);
+        screens.add(screen3);
+
         activeScreen = screens.get(0);
 
     }
@@ -32,7 +35,6 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
     public void settings() {
         // size(DRAWING_WIDTH, DRAWING_HEIGHT, P2D);
 //        size(activeScreen.displayWidth, activeScreen.displayHeight);
-        fullScreen();
     }
 
     public void setup() {
@@ -60,7 +62,7 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 
     public void keyReleased() {
         while (keys.contains(keyCode))
-            keys.remove(new Integer(keyCode));
+            keys.remove(Integer.valueOf(keyCode));
     }
 
     public boolean isPressed(Integer code) {
