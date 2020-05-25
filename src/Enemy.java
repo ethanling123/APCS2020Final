@@ -11,6 +11,8 @@ public class Enemy extends GameCharacter implements DamagableInterface {
         this.hitDmg = hitDmg;
         this.shotDmg = shotDmg;
         this.name = name;
+        
+        System.out.println("Enemy spawned");
     }
 
     public boolean damageActor(Player player) {
