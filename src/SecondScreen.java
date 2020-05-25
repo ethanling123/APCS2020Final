@@ -125,10 +125,8 @@ public class SecondScreen extends Screen {
                 xDir /= directionMagnitude;
                 yDir /= directionMagnitude;
 
-                System.out.println(xDir + ", " + yDir);
-
                 if(frames > 10)
-                    player.shootProjectile(proj, player, xDir, yDir);
+                    player.shootProjectile(proj, player, 10 * xDir, 10 * yDir);
             }
         }
 
@@ -182,7 +180,6 @@ public class SecondScreen extends Screen {
 
     private void restartScreen(String string) {
         System.out.println(string);
-
     }
 
     private void act() {
@@ -192,7 +189,7 @@ public class SecondScreen extends Screen {
 
         for(int x = 0; x < enemies.size(); x++) {
             if (player.getyCord() < enemies.get(x).getxCord())
-                    player.setPoints(player.getPoints() - 1);
+                player.setPoints(player.getPoints() - 1);
         }
     }
 
