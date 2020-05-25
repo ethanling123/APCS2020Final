@@ -161,18 +161,23 @@ public class SecondScreen extends Screen {
                 player.setPoints(player.getPoints() - 10);
             }
         }
-        for (int p = 0; p < projectileList.size(); p++) {
+        for (int p = 0; p < projectileList.size();) {
+            boolean removeE = false;
+            boolean removeP = false;
             if (projectileList.get(p).fromPlayer()) {
-                for (int e = 0; e < enemies.size(); e++) {
+                for (int e = 0; e < enemies.size(); ) {
                     if (projectileList.get(p).isIntersecting(enemies.get(e))) {
                         if (projectileList.get(p).damageActor(enemies.get(e))) {
                             player.killedActor();
                             enemies.remove(e);
                             projectileList.remove(p);
                             player.setPoints(player.getPoints() + 20);
+                            removeE = true;
+                            removeP = true;
                         }
-
                     }
+                    if (!removeE)
+                        e++;
                 }
 
 
@@ -184,10 +189,14 @@ public class SecondScreen extends Screen {
                     if (projectileList.get(p).damageActor(player))
                         restartScreen("Killed by: an enemy bullet");
                 }
-            } if (projectileList.get(p).getxCord() > super.displayWidth || projectileList.get(p).getxCord() < 0 ||
+            }
+            if (projectileList.get(p).getxCord() > super.displayWidth || projectileList.get(p).getxCord() < 0 ||
                     projectileList.get(p).getyCord() > super.displayHeight || projectileList.get(p).getyCord() < 0) {
                 projectileList.remove(p);
+                removeP = true;
             }
+            if (!removeP)
+                p++;
         }
     }
 
