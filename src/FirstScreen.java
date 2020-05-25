@@ -13,8 +13,8 @@ public class FirstScreen extends Screen {
 		super(800,600);
 		this.surface = surface;
 
-		playButton = new Rectangle(800/2-100,600/2-50,200,100);
-		creditButton = new Rectangle(800/2-100,600/2 + 70,200,100);
+		playButton = new Rectangle(super.displayWidth/2-100,super.displayHeight/2-50,200,100);
+		creditButton = new Rectangle(super.displayWidth/2-100,super.displayHeight/2 + 70,200,100);
 	}
 
 
@@ -34,12 +34,12 @@ public class FirstScreen extends Screen {
 		surface.fill(0);
 		float w2 = surface.textWidth("Credits");
 		surface.text("Credits", creditButton.x+ creditButton.width/2-w2/2, creditButton.y+ creditButton.height/2);
-		
+
+		surface.textSize(24);
+		surface.text("Spaceteroids", super.displayWidth/3 + 65, super.displayHeight/3);
+
 		surface.popStyle();
 	}
-
-
-
 	
 	public void mousePressed() {
 		Point p = surface.actualCoordinatesToAssumed(new Point(surface.mouseX,surface.mouseY));
