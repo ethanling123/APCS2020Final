@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 
 
-public class SecondScreen extends Screen{
+public class SecondScreen extends Screen {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,7 +28,7 @@ public class SecondScreen extends Screen{
     private String lemonImg;
     private Player player;
     private Enemy lil;
-    
+
     private ArrayList<Actor> allActors;
     private ArrayList<Enemy> generalEnemies;
     private ArrayList<Enemy> enemies;
@@ -74,7 +74,7 @@ public class SecondScreen extends Screen{
         collide();
 
         //if(frames % 5 <= 0)
-        	spawn();
+        spawn();
 
         this.player.draw(surface);
         enemies.forEach((a) -> a.draw(surface));
@@ -82,7 +82,7 @@ public class SecondScreen extends Screen{
 
         // Change stuff
         int moveSpeed = 3;
-        
+
         if (surface.isPressed(KeyEvent.VK_W)) {
             if (player.getYVelocity() >= moveSpeed * -3) {
                 player.addYVelocity(-moveSpeed);
@@ -132,7 +132,7 @@ public class SecondScreen extends Screen{
 
                 xDir /= directionMagnitude;
                 yDir /= directionMagnitude;
-                
+
                 System.out.println(xDir + ", " + yDir);
 
                 player.shootProjectile(proj, player, xDir, yDir);
@@ -182,16 +182,15 @@ public class SecondScreen extends Screen{
     */
 
     private void spawn() {
-        if ((frames > 0)) {
-            for (int f = (int) (frames/10); f > 0; f--) {
+        if ((frames % 20 == 0)) {
                 enemies.add(lil.makeEnemy((int) (Math.random() * this.displayWidth), 0));
                 enemies.get(enemies.size() - 1).addYVelocity(3);
-            }
         }
     }
 
+
     private void collide() {
-    	
+
         for (Enemy e : enemies) {
             if (e.isIntersecting(player)) {
                 if (!iFrames) {
@@ -233,9 +232,9 @@ public class SecondScreen extends Screen{
     }
 
     private void act() {
-    	player.act();
-    	
-    	enemies.forEach((a) -> a.act());
+        player.act();
+
+        enemies.forEach((a) -> a.act());
         proj.forEach((a) -> a.act());
     }
 
