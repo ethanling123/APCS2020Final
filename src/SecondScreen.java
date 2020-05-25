@@ -55,7 +55,8 @@ public class SecondScreen extends Screen{
 
     public void draw() {
         frames++;
-        
+
+        System.out.println(enemies.size());
         surface.pushStyle();
         surface.rect((int) (super.displayWidth * 7.5 / 9), 0, (super.displayWidth), super.displayHeight);
         surface.background(170);
@@ -71,10 +72,9 @@ public class SecondScreen extends Screen{
         surface.popStyle();
         act();
         collide();
-        
-        if(frames % 5 <= 0) {
+
+        //if(frames % 5 <= 0)
         	spawn();
-        }
 
         this.player.draw(surface);
         enemies.forEach((a) -> a.draw(surface));
@@ -182,8 +182,8 @@ public class SecondScreen extends Screen{
     */
 
     private void spawn() {
-        if (!(seconds < Math.sqrt(seconds))) {
-            for (int f = (int) (Math.sqrt(seconds)); f > 0; f--) {
+        if ((frames > 0)) {
+            for (int f = (int) (frames/10); f > 0; f--) {
                 enemies.add(lil.makeEnemy((int) (Math.random() * this.displayWidth), 0));
                 enemies.get(enemies.size() - 1).addYVelocity(3);
             }

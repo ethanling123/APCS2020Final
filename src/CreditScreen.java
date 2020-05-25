@@ -12,13 +12,6 @@ public class CreditScreen extends Screen {
 
 	}
 
-	/*
-
-
-
-
-	 */
-
 
 	public void draw() {
 
