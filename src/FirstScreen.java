@@ -51,7 +51,5 @@ public class FirstScreen extends Screen {
 		if (creditButton.contains(p))
 			surface.switchScreen(ScreenSwitcher.SCREEN3);
 	}
-	
-
 }
 

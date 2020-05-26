@@ -11,8 +11,6 @@ public class Enemy extends GameCharacter implements DamagableInterface {
         this.hitDmg = hitDmg;
         this.shotDmg = shotDmg;
         this.name = name;
-        
-        System.out.println("Enemy spawned");
     }
 
     public boolean damageActor(Player player) {
@@ -27,12 +25,10 @@ public class Enemy extends GameCharacter implements DamagableInterface {
     }
 
     public GameCharacter makeGameCharacter(int x, int y) {
-        Enemy a = new Enemy(x, y, super.getRadius(), super.getHealth(), shotDmg, hitDmg, projectileType, "lil");
-        return a;
+        return new Enemy(x, y, super.getRadius(), super.getHealth(), shotDmg, hitDmg, projectileType, "lil");
     }
 
     public Enemy makeEnemy(int x, int y) {
-        Enemy a = new Enemy(x, y, super.getRadius(), super.getHealth(), shotDmg, hitDmg, projectileType, "lil");
-        return a;
+        return new Enemy(x, y, super.getRadius(), super.getHealth(), shotDmg, hitDmg, projectileType, "lil");
     }
 }
