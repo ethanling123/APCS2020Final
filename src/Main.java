@@ -39,6 +39,5 @@ public class Main {
         window.setResizable(true);
         window.setVisible(true);
         window.setIconImage(img.getImage());
-
     }
 }
